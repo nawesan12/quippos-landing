@@ -46,7 +46,7 @@ export default function Descriptions() {
       <section className="cards">
         {cards.map((card) => (
           <Card key={card.id} className="card">
-            <img src={card.icon} alt={card.titulo} />
+            {/*<img src={card.icon} alt={card.titulo} />*/}
             <h3>{card.titulo}</h3>
             <p>{card.descripcion}</p>
           </Card>
