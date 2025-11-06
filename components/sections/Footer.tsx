@@ -3,30 +3,6 @@ export default function Footer() {
   return (
     <footer className="bg-[#04102d] py-12 md:py-16 text-white relative z-40">
       <div className="mx-auto max-w-7xl px-6 lg:px-0">
-        <div className="border-b border-white/10 pb-12 md:pb-16">
-          <div className="flex flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left">
-            <h3 className="text-4xl font-semibold leading-tight md:text-4xl">
-              Empecemos a <br className="md:hidden block" />
-              <span className="text-[#4bc3fe] text-6xl hand-font relative top-1">
-                crear
-              </span>
-              juntos.
-            </h3>
-
-            <a
-              href="https://www.finneg.com/ar/site/contacto/"
-              target="_blank"
-              className=""
-            >
-              <img
-                src="/ui/agenda-una-demo.png"
-                alt=""
-                className="md:h-16 h-15 aspect-auto object-contain"
-              />
-            </a>
-          </div>
-        </div>
-
         <div className="flex flex-col items-center justify-between gap-10 pt-12 md:flex-row md:gap-6">
           <img src="/finnegans-blanco.png" className="h-12" alt="" />
 

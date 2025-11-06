@@ -11,7 +11,7 @@ export default function CTA() {
           sin limites ni barreras.
         </h3>
 
-        <Button>Agendá una demo ahora</Button>
+        <Button className="rounded-full">Agendá una demo ahora</Button>
       </div>
     </section>
   );
