@@ -4,39 +4,41 @@ export default function Descriptions() {
   const cards = [
     {
       id: 1,
-      icon: "",
-      titulo: "",
-      descripcion: "",
+      icon: "/descriptions/1.png",
+      titulo: "100% Configurable",
+      descripcion: "Hace que el sistema se adapte a tu forma de trabajar.",
     },
     {
       id: 2,
-      icon: "",
-      titulo: "",
-      descripcion: "",
+      icon: "/descriptions/2.png",
+      titulo: "IA+ No Code",
+      descripcion:
+        "Automatiza tus tareas y procesos con inteligencia artificial.",
     },
     {
       id: 3,
-      icon: "",
-      titulo: "",
-      descripcion: "",
+      icon: "/descriptions/3.png",
+      titulo: "Portal de Autogestion",
+      descripcion: "Centraliza la informacion y tramites de tus colaboradores.",
     },
     {
       id: 4,
-      icon: "",
-      titulo: "",
-      descripcion: "",
+      icon: "/descriptions/4.png",
+      titulo: "Liquidacion Automatica",
+      descripcion: "Genera y distribui recibos en segundos, sin errores.",
     },
     {
       id: 5,
-      icon: "",
-      titulo: "",
-      descripcion: "",
+      icon: "/descriptions/5.png",
+      titulo: "Integracion Total",
+      descripcion:
+        "Conecta el sistema con cualquier ERP o herramienta del mercado.",
     },
     {
       id: 6,
-      icon: "",
-      titulo: "",
-      descripcion: "",
+      icon: "/descriptions/6.png",
+      titulo: "Implementación Express",
+      descripcion: "Pasa del inicio al uso real en semanas.",
     },
   ];
 
