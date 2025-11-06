@@ -6,6 +6,7 @@ export default function QuipposBanner() {
       <Image
         src="/images/quippos-banner.png"
         alt="Quippos Banner"
+        className="w-full md:max-w-7xl"
         width={1000}
         height={400}
       />
