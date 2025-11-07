@@ -1,3 +1,4 @@
+import AboutFinnegans from "@/components/sections/About";
 import CTA from "@/components/sections/CTA";
 import Descriptions from "@/components/sections/Descriptions";
 import Features from "@/components/sections/Features";
@@ -17,6 +18,7 @@ export default function Home() {
       <QuipposBanner />
       <TeamBanner />
       <CTA />
+      <AboutFinnegans />
       <Footer />
     </>
   );

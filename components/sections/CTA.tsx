@@ -6,12 +6,17 @@ export default function CTA() {
       <div className="logo"></div>
 
       <div className="copy">
-        <h3>
+        <h3 className="text-right">
           El futuro de la gestión del talento, <br />
-          sin limites ni barreras.
+          <span>sin limites ni barreras.</span>
         </h3>
 
-        <Button className="rounded-full">Agendá una demo ahora</Button>
+        <p>
+          Transforma la comunicacion interna en un dialogo mas simple, humano y
+          cercano.
+        </p>
+
+        <Button className="rounded-full p-4">Agendá una demo ahora</Button>
       </div>
     </section>
   );
