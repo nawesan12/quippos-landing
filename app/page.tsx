@@ -5,6 +5,7 @@ import Features from "@/components/sections/Features";
 import Footer from "@/components/sections/Footer";
 import Hero from "@/components/sections/Hero";
 import IdealCustomer from "@/components/sections/IdealCustomer";
+import PartnersCarousel from "@/components/sections/PartnersCarousel";
 import QuipposBanner from "@/components/sections/QuipposBanner";
 import TeamBanner from "@/components/sections/TeamBanner";
 
@@ -19,6 +20,7 @@ export default function Home() {
       <TeamBanner />
       <CTA />
       <AboutFinnegans />
+      <PartnersCarousel />
       <Footer />
     </>
   );

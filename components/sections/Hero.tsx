@@ -86,29 +86,29 @@ export default function Hero() {
               Solicitar demo gratuita
             </CardTitle>
 
-            <div>
-              <div>
+            <div className="space-y-6">
+              <div className="space-y-2">
                 <Label>Nombre y Apellido</Label>
 
                 <Input className="bg-gray-200 rounded-full py-4 px-2" />
               </div>
-              <div>
+              <div className="space-y-2">
                 <Label>Email laboral</Label>
 
                 <Input className="bg-gray-200 rounded-full py-4 px-2" />
               </div>
-              <div>
+              <div className="space-y-2">
                 <Label>Industria</Label>
 
                 <Input className="bg-gray-200 rounded-full py-4 px-2" />
               </div>
-              <div>
+              <div className="space-y-2">
                 <Label>Pais</Label>
 
                 <Input className="bg-gray-200 rounded-full py-4 px-2" />
               </div>
               <div className="flex items-center gap-2">
-                <div>
+                <div className="space-y-2">
                   <Label>Cantidad de Empleados</Label>
 
                   <Input className="bg-gray-200 rounded-full py-4 px-2" />
