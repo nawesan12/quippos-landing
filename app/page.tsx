@@ -1,6 +1,7 @@
 import AboutFinnegans from "@/components/sections/About";
 import CTA from "@/components/sections/CTA";
 import Descriptions from "@/components/sections/Descriptions";
+import DescriptionsDesktop from "@/components/sections/DescriptionsDesktop";
 import Features from "@/components/sections/Features";
 import Footer from "@/components/sections/Footer";
 import Hero from "@/components/sections/Hero";
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <Hero />
       <Descriptions />
+      <DescriptionsDesktop />
       <Features />
       <IdealCustomer />
       <QuipposBanner />

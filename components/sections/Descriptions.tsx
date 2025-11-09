@@ -73,7 +73,7 @@ export default function Descriptions() {
   };
 
   return (
-    <section className="bg-[#27067f] py-12">
+    <section className="bg-[#27067f] py-12 md:hidden block">
       <div className="mx-auto flex w-full  flex-col items-center gap-6 px-4">
         {/* Controllers */}
         <ul className="controllers w-full flex gap-px items-center bg-[#1e0560] rounded-2xl overflow-hidden">
