@@ -2,87 +2,104 @@ import Image from "next/image";
 
 export default function Features() {
   return (
-    <section className="flex items-center justify-center md:flex-row flex-col md:max-w-7xl w-full bg-[#01102f] py-11">
-      <section className="rounded-4xl border-2 border-white max-w-2xs">
-        <Image
-          src="/Logos/logo finnni.svg"
-          alt="Logo Finní"
-          width={200}
-          height={200}
-          className="mx-auto py-8"
-        />
-
-        <div className="estampilla  bg-cover bg-no-repeat bg-center relative bg-white py-8  flex flex-col gap-4 px-8">
-          <h3 className="bg-[#ff4131] text-[#faf5f2] rounded-full py-2 px-6 text-2xl font-semibold max-w-max relative -left-15">
-            Nuestra IA
-          </h3>
-
-          <p className="font-medium">
-            Diseñada para liberar a tu equipo de lo operativo, <br />
-            impulsando su evolucion profesional y el desarrollo
-            <br />
-            de nuevas competencias que los llevan mas lejos .
-          </p>
-        </div>
-      </section>
-
-      <section className="list-of-features flex flex-col gap-4 ">
-        <article className="rounded-2xl">
+    <section className="bg-[#01102f] ">
+      <section className="flex items-center justify-around md:flex-row flex-col w-full py-11 md:max-w-7xl mx-auto">
+        <section className="rounded-4xl border-2 border-white max-w-2xs">
           <Image
-            src="/images/feature1.png"
-            alt="Feature 1"
-            width={100}
-            height={100}
+            src="/Logos/logo finnni.svg"
+            alt="Logo Finní"
+            width={200}
+            height={200}
+            className="mx-auto py-8"
           />
 
-          <p className="font-medium">
-            Auomatizacion{" "}
-            <span className="italic text-red-600">sin codigo</span> de procesos
-            repetitivos.
-          </p>
-        </article>
-        <article>
-          <Image
-            src="/images/feature1.png"
-            alt="Feature 1"
-            width={100}
-            height={100}
-          />
+          <div className="estampilla  bg-cover bg-no-repeat bg-center relative bg-white py-8  flex flex-col gap-4 px-8">
+            <h3 className="bg-[#ff4131] text-[#faf5f2] rounded-full py-2 px-6 text-2xl font-semibold max-w-max relative -left-15">
+              Nuestra IA
+            </h3>
 
-          <p className="font-medium">
-            Asistente{" "}
-            <span className="italic text-red-600">conversacional</span> para
-            RRHH y colaboradores
-          </p>
-        </article>
-        <article>
-          <Image
-            src="/images/feature1.png"
-            alt="Feature 1"
-            width={100}
-            height={100}
-          />
+            <p className="font-medium">
+              Diseñada para liberar a tu equipo de lo operativo, <br />
+              impulsando su evolucion profesional y el desarrollo
+              <br />
+              de nuevas competencias que los llevan mas lejos.
+            </p>
+          </div>
+        </section>
 
-          <p className="font-medium">
-            Mejora la experiencia digital:{" "}
-            <span className="italic text-red-600">
-              Respuestas rapidas y guiadas
-            </span>
-          </p>
-        </article>
-        <article>
-          <Image
-            src="/images/feature1.png"
-            alt="Feature 1"
-            width={100}
-            height={100}
-          />
+        <section className="list-of-features flex flex-col gap-4 text-white px-6 mt-12 md:mt-0">
+          <article className="p-px rounded-2xl bg-gradient-to-r from-[#ff4131] to-transparent">
+            <div className="rounded-2xl bg-[#551b30] flex items-center gap-4 p-4 px-6">
+              <Image
+                src="/Iconos/SVG/flecha2.svg"
+                alt="Feature 1"
+                width={100}
+                height={100}
+                className="h-10 w-10 object-contain"
+              />
 
-          <p className="font-medium">
-            Diseño de{" "}
-            <span className="italic text-red-600">procesos a medida</span>
-          </p>
-        </article>
+              <p className="font-medium whitespace-nowrap text-sm">
+                Auomatizacion{" "}
+                <span className="italic text-red-600">sin codigo</span>
+                <br /> de procesos repetitivos.
+              </p>
+            </div>
+          </article>
+
+          <article className="p-px rounded-2xl bg-gradient-to-r from-[#ff4131] to-transparent">
+            <div className="rounded-2xl bg-[#551b30] flex items-center gap-4 p-4 px-6">
+              <Image
+                src="/Iconos/SVG/chat2.svg"
+                alt="Feature 1"
+                width={100}
+                height={100}
+                className="h-10 w-10 object-contain"
+              />
+
+              <p className="font-medium whitespace-nowrap text-sm">
+                Asistente{" "}
+                <span className="italic text-red-600">conversacional</span>
+                <br /> para RRHH y colaboradores
+              </p>
+            </div>
+          </article>
+
+          <article className="p-px rounded-2xl bg-gradient-to-r from-[#ff4131] to-transparent">
+            <div className="rounded-2xl bg-[#551b30] flex items-center gap-4 p-4 px-6">
+              <Image
+                src="/Iconos/SVG/destello2.svg"
+                alt="Feature 1"
+                width={100}
+                height={100}
+                className="h-10 w-10 object-contain"
+              />
+
+              <p className="font-medium whitespace-nowrap text-sm">
+                Mejora la experiencia digital: <br />
+                <span className="italic text-red-600">
+                  Respuestas rapidas y guiadas
+                </span>
+              </p>
+            </div>
+          </article>
+
+          <article className="p-px rounded-2xl bg-gradient-to-r from-[#ff4131] to-transparent">
+            <div className="rounded-2xl bg-[#551b30] flex items-center gap-4 p-4 px-6">
+              <Image
+                src="/Iconos/SVG/lapiz2.svg"
+                alt="Feature 1"
+                width={100}
+                height={100}
+                className="h-10 w-10 object-contain"
+              />
+
+              <p className="font-medium whitespace-nowrap text-sm">
+                Diseño de{" "}
+                <span className="italic text-red-600">procesos a medida</span>
+              </p>
+            </div>
+          </article>
+        </section>
       </section>
     </section>
   );
