@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function IdealCustomer() {
   return (
-    <section className="flex md:flex-row flex-col items-center justify-center md:justify-evenly bg-[#01102f] px-8">
+    <section className="flex md:flex-row flex-col items-center justify-center md:justify-evenly bg-[#01102f] px-8 md:py-14 md:pt-8">
       <section className="w-full md:max-w-sm">
         <h3 className="text-white my-8 text-5xl font-medium">
           <span className="text-[#ad7efc] relative mr-3">

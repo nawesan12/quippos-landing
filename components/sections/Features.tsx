@@ -1,10 +1,13 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Features() {
   return (
     <section className="bg-[#01102f] ">
-      <section className="flex items-center justify-around md:flex-row flex-col w-full py-11 md:max-w-7xl mx-auto">
-        <section className="rounded-4xl border-2 border-white max-w-2xs">
+      <section className="flex items-center justify-around md:flex-row flex-col w-full py-11 md:pt-28 md:max-w-7xl mx-auto">
+        <section className="rounded-4xl border-2 border-white max-w-xs md:scale-125">
           <Image
             src="/Logos/logo finnni.svg"
             alt="Logo Finní"
@@ -13,21 +16,31 @@ export default function Features() {
             className="mx-auto py-8"
           />
 
-          <div className="estampilla  bg-cover bg-no-repeat bg-center relative bg-white py-8  flex flex-col gap-4 px-8">
+          <motion.div
+            className="estampilla bg-cover bg-no-repeat bg-center relative bg-white py-8 flex flex-col gap-4 px-8"
+            initial={{ rotate: 0 }}
+            whileInView={{ rotate: -6 }}
+            transition={{
+              delay: 1, // wait 1 second after appearing in viewport
+              duration: 0.6, // smooth, short tilt
+              ease: "easeOut",
+            }}
+            viewport={{ once: true, amount: 0.5 }} // trigger once when 50% visible
+          >
             <h3 className="bg-[#ff4131] text-[#faf5f2] rounded-full py-2 px-6 text-2xl font-semibold max-w-max relative -left-15">
               Nuestra IA
             </h3>
 
             <p className="font-medium">
               Diseñada para liberar a tu equipo de lo operativo, <br />
-              impulsando su evolucion profesional y el desarrollo
+              impulsando su evolución profesional y el desarrollo
               <br />
-              de nuevas competencias que los llevan mas lejos.
+              de nuevas competencias que los llevan más lejos.
             </p>
-          </div>
+          </motion.div>
         </section>
 
-        <section className="list-of-features flex flex-col gap-4 text-white px-6 mt-12 md:mt-0">
+        <section className="list-of-features flex flex-col gap-4 text-white px-6 mt-12 md:mt-0 md:scale-[140%]">
           <article className="p-px rounded-2xl bg-gradient-to-r from-[#ff4131] to-transparent">
             <div className="rounded-2xl bg-[#551b30] flex items-center gap-4 p-4 px-6">
               <Image
@@ -39,7 +52,7 @@ export default function Features() {
               />
 
               <p className="font-medium whitespace-nowrap text-sm">
-                Auomatizacion{" "}
+                Automatizacion{" "}
                 <span className="italic text-red-600">sin codigo</span>
                 <br /> de procesos repetitivos.
               </p>
