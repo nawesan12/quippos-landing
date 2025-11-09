@@ -4,17 +4,17 @@ export default function Footer() {
     <footer className="bg-[#04102d] py-12 md:py-16 text-white relative z-40">
       <div className="mx-auto max-w-7xl px-6 lg:px-0">
         <div className="flex flex-col items-center justify-between gap-10 pt-12 md:flex-row md:gap-6">
-          <img src="/finnegans-blanco.png" className="h-12" alt="" />
+          <img src="/Logos/isologo finnegans.svg" className="h-12" alt="" />
 
-          <div className="hidden items-center text-lg font-medium gap-6 text-white md:flex">
+          <div className="items-center text-lg font-medium gap-6 text-white md:flex">
             <a href="#soluciones" className="transition hover:text-[#4bc3fe]">
-              Soluciones
+              Que ofrecemos
             </a>
             <a href="#academia" className="transition hover:text-[#4bc3fe]">
-              Academia
+              Finni IA
             </a>
             <a href="#impacto" className="transition hover:text-[#4bc3fe]">
-              Impacto
+              Contacto
             </a>
           </div>
 
