@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function QuipposBanner() {
   return (
-    <section className="flex items-center justify-center py-11">
+    <section className="flex items-center justify-center md:py-11 py-6 bg-[#a780f5]">
       <Image
-        src="/images/quippos-banner.png"
+        src="/Logos/quippos1.svg"
         alt="Quippos Banner"
         className="w-full md:max-w-7xl"
         width={1000}

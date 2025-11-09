@@ -2,17 +2,27 @@ import Image from "next/image";
 
 export default function Features() {
   return (
-    <section className="flex items-center justify-center md:max-w-7xl w-full">
-      <section className="rounded-4xl border-2 border-white">
+    <section className="flex items-center justify-center md:flex-row flex-col md:max-w-7xl w-full bg-[#01102f] py-11">
+      <section className="rounded-4xl border-2 border-white max-w-2xs">
         <Image
-          src="/logo-finni.png"
+          src="/Logos/logo finnni.svg"
           alt="Logo Finní"
           width={200}
           height={200}
+          className="mx-auto py-8"
         />
 
-        <div className="estampilla">
-          <Image src="/estampilla.png" alt="" width={1000} height={1000} />
+        <div className="estampilla  bg-cover bg-no-repeat bg-center relative bg-white py-8  flex flex-col gap-4 px-8">
+          <h3 className="bg-[#ff4131] text-[#faf5f2] rounded-full py-2 px-6 text-2xl font-semibold max-w-max relative -left-15">
+            Nuestra IA
+          </h3>
+
+          <p className="font-medium">
+            Diseñada para liberar a tu equipo de lo operativo, <br />
+            impulsando su evolucion profesional y el desarrollo
+            <br />
+            de nuevas competencias que los llevan mas lejos .
+          </p>
         </div>
       </section>
 
