@@ -69,7 +69,7 @@ export default function Hero() {
 
             <div className="ml-3 flex-1 overflow-hidden ">
               {/* “Ventana” fija del elevador */}
-              <div className="relative h-6 overflow-hidden">
+              <div className="relative h-8 overflow-hidden">
                 <AnimatePresence initial={false} mode="wait">
                   <motion.p
                     key={index} // clave distinta para que AnimatePresence detecte el cambio
@@ -78,7 +78,7 @@ export default function Hero() {
                     animate="center"
                     exit="exit"
                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="absolute inset-0 flex items-center text-xl font-medium text-purple-50 leading-6"
+                    className="absolute inset-0 flex items-center text-xl md:text-3xl md:pl-2 whitespace-nowrap font-medium text-purple-50 leading-6"
                   >
                     {phrases[index]}
                   </motion.p>

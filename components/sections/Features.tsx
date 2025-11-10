@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 export default function Features() {
   return (
-    <section className="bg-[#01102f] ">
-      <section className="flex items-center justify-around md:flex-row flex-col w-full py-20 md:pt-28 md:max-w-7xl mx-auto">
+    <section className="bg-[#01102f]">
+      <section className="flex items-center justify-around md:flex-row  min-h-svh flex-col w-full  md:pt-28 md:max-w-7xl mx-auto">
         <section className="rounded-4xl border-2 border-white max-w-xs md:scale-125">
           <Image
             src="/Logos/logo finnni.svg"
