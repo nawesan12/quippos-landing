@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function TeamBanner() {
+export default function TeamBannerMobile() {
   return (
-    <section className="items-center justify-center max-h-svh relative overflow-hidde hidden md:flex">
+    <section className="flex items-center justify-center max-h-svh  relative overflow-hidden md:hidden">
       {/* Background photos */}
       <Image
         src="/Fotos/foto-mobile.jpg"
@@ -14,21 +14,15 @@ export default function TeamBanner() {
         height={1000}
         className="object-cover flex md:hidden w-full h-full"
       />
-      <Image
-        src="/Fotos/foto-web.jpg"
-        alt="Foto de equipo"
-        width={1000}
-        height={1000}
-        className="object-contain md:flex hidden w-screen h-full"
-      />
+
       {/* Notification layers */}
       <section className="absolute top-0 left-0 w-screen h-full">
         {/* Vacas */}
         <motion.div
-          className="absolute md:top-36 md:left-48 2xl:top-40 2xl:left-60"
+          className="absolute top-24 left-4"
           initial={{ opacity: 0, x: -40, y: 16, scale: 0.95 }}
           whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
           <Image
@@ -36,16 +30,16 @@ export default function TeamBanner() {
             alt="Quippos Finnegans"
             width={700}
             height={700}
-            className="object-cover max-w-max md:flex md:h-32 2xl:h-40"
+            className="object-contain max-w-max h-24"
           />
         </motion.div>
 
         {/* Equipo */}
         <motion.div
-          className="absolute md:top-80 md:left-20 2xl:top-96 2xl:left-24"
+          className="absolute top-40 left-1"
           initial={{ opacity: 0, x: -40, y: 16, scale: 0.95 }}
           whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
         >
           <Image
@@ -53,16 +47,16 @@ export default function TeamBanner() {
             alt="Quippos Finnegans"
             width={700}
             height={700}
-            className="object-cover max-w-max md:flex md:h-12 2xl:h-14"
+            className="object-contain max-w-max h-16"
           />
         </motion.div>
 
         {/* Reaccionar + Comentar */}
         <motion.div
-          className="flex gap-4 max-w-max absolute md:bottom-28 md:left-96 2xl:bottom-32 2xl:left-[440px]"
+          className="flex gap-3 max-w-max absolute bottom-56 left-10"
           initial={{ opacity: 0, y: 24, scale: 0.95 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.25 }}
         >
           <Image
@@ -70,23 +64,23 @@ export default function TeamBanner() {
             alt="Quippos Finnegans"
             width={700}
             height={700}
-            className="object-cover aspect-auto max-w-max md:flex md:h-8 2xl:h-10"
+            className="object-contain aspect-auto max-w-max w-20 overflow-hidden"
           />
           <Image
             src="/Otros/items/comentar.svg"
             alt="Quippos Finnegans"
             width={700}
             height={700}
-            className="object-cover aspect-auto max-w-max md:flex md:h-8 2xl:h-10"
+            className="object-contain aspect-auto max-w-max w-20 overflow-hidden"
           />
         </motion.div>
 
         {/* Cumple */}
         <motion.div
-          className="absolute md:right-80 md:top-36 2xl:right-96 2xl:top-44"
+          className="absolute top-32 left-72"
           initial={{ opacity: 0, x: 40, y: 16, scale: 0.95 }}
           whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
         >
           <Image
@@ -94,16 +88,16 @@ export default function TeamBanner() {
             alt="Quippos Finnegans"
             width={700}
             height={700}
-            className="object-cover aspect-auto max-w-max md:flex  h-14"
+            className="object-cover aspect-auto max-w-max w-32"
           />
         </motion.div>
 
         {/* Recibo / Firma / Docu */}
         <motion.section
-          className="space-y-2 absolute md:right-44 md:top-72 2xl:right-60 2xl:top-80"
+          className="space-y-2 absolute bottom-56 left-[370px] "
           initial={{ opacity: 0, x: 40, y: 16, scale: 0.95 }}
           whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.25 }}
         >
           <Image
@@ -111,21 +105,21 @@ export default function TeamBanner() {
             alt="Quippos Finnegans"
             width={700}
             height={700}
-            className="object-cover aspect-auto max-w-max md:flex  h-16"
+            className="object-cover aspect-auto max-w-max w-36"
           />
           <Image
             src="/Otros/items/firma.svg"
             alt="Quippos Finnegans"
             width={700}
             height={700}
-            className="object-cover aspect-auto max-w-max md:flex  h-16"
+            className="object-cover aspect-auto max-w-max w-36"
           />
           <Image
             src="/Otros/items/docu.svg"
             alt="Quippos Finnegans"
             width={700}
             height={700}
-            className="object-cover aspect-auto max-w-max md:flex  h-16"
+            className="object-cover aspect-auto max-w-max w-36"
           />
         </motion.section>
       </section>

@@ -8,7 +8,8 @@ import Hero from "@/components/sections/Hero";
 import IdealCustomer from "@/components/sections/IdealCustomer";
 import PartnersCarousel from "@/components/sections/PartnersCarousel";
 import QuipposBanner from "@/components/sections/QuipposBanner";
-import TeamBanner from "@/components/sections/TeamBanner";
+import TeamBannerDesktop from "@/components/sections/TeamBannerDesktop";
+import TeamBannerMobile from "@/components/sections/TeamBannerMobile";
 
 export default function Home() {
   return (
@@ -19,7 +20,8 @@ export default function Home() {
       <Features />
       <IdealCustomer />
       <QuipposBanner />
-      <TeamBanner />
+      <TeamBannerDesktop />
+      <TeamBannerMobile />
       <CTA />
       <AboutFinnegans />
       <PartnersCarousel />
