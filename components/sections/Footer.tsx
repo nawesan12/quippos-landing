@@ -68,7 +68,7 @@ export default function Footer() {
             <a href="#home" className="rounded-full  text-sm transition">
               <img
                 src="/ultimo-boton.png"
-                className="h-8 aspect-auto object-contain "
+                className="w-32 aspect-auto object-contain max-w-max overflow-hidden"
                 alt="Finnegans"
                 width={200}
                 height={200}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, UIEvent } from "react";
+import { useRef, useState, useEffect, UIEvent } from "react";
 import Image from "next/image";
 
 const cards = [
@@ -66,17 +66,43 @@ export default function DescriptionsDesktop() {
 
     const { offsetWidth } = container;
 
+    if (!offsetWidth) return;
+
     container.scrollTo({
       left: index * offsetWidth,
       behavior: "smooth",
     });
-    setActiveIndex(index);
   };
+
+  // 🔁 Auto avance cada 2 segundos
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => {
+        const next = prev + 1 >= cards.length ? 0 : prev + 1;
+
+        // sincronizar carrusel horizontal (vista "mobile" dentro de este componente)
+        const container = scrollRef.current;
+        if (container) {
+          const { offsetWidth } = container;
+          if (offsetWidth) {
+            container.scrollTo({
+              left: next * offsetWidth,
+              behavior: "smooth",
+            });
+          }
+        }
+
+        return next;
+      });
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="bg-[#27067f] py-12 md:block hidden">
       <div className="mx-auto w-full max-w-7xl flex flex-col gap-8 px-4 lg:flex-row lg:items-stretch">
-        {/* MOBILE: controllers horizontales + carrusel */}
+        {/* MOBILE (dentro de este componente): controllers horizontales + carrusel */}
         <div className="w-full flex flex-col items-center gap-6 lg:hidden">
           {/* Controllers */}
           <ul className="controllers w-full flex gap-px items-center bg-[#1e0560] rounded-2xl overflow-hidden">
@@ -89,7 +115,10 @@ export default function DescriptionsDesktop() {
                   ${i === 0 ? "rounded-l-2xl" : ""}
                   ${i === cards.length - 1 ? "rounded-r-2xl" : ""}
                 `}
-                onClick={() => scrollToIndex(i)}
+                onClick={() => {
+                  setActiveIndex(i);
+                  scrollToIndex(i);
+                }}
               >
                 <Image
                   src={card.icon}
@@ -127,18 +156,18 @@ export default function DescriptionsDesktop() {
         </div>
 
         {/* DESKTOP: controllers verticales + 6 cards lado a lado */}
-        <div className="hidden w-full lg:flex gap-8">
+        <div className="hidden w-full lg:flex gap-8 py-11">
           {/* Controllers verticales */}
-          <ul className="controllers flex flex-col gap-px bg-[#1e0560] rounded-2xl overflow-hidden w-20">
+          <ul className="controllers flex flex-col gap-px bg-[#1e0560] rounded-2xl overflow-hidden w-20 h-full">
             {cards.map((card, i) => (
               <li
                 key={card.id}
                 className={`
-                  flex h-16 items-center justify-center cursor-pointer transition-colors
-                  ${activeIndex >= i ? "bg-[#a780f5]" : "bg-transparent"}
-                  ${i === 0 ? "rounded-t-2xl" : ""}
-                  ${i === cards.length - 1 ? "rounded-b-2xl" : ""}
-                `}
+                   flex flex-1 min-h-[4rem] items-center justify-center cursor-pointer transition-colors
+                   ${activeIndex >= i ? "bg-[#a780f5]" : "bg-transparent"}
+                   ${i === 0 ? "rounded-t-2xl" : ""}
+                   ${i === cards.length - 1 ? "rounded-b-2xl" : ""}
+                 `}
                 onClick={() => setActiveIndex(i)}
               >
                 <Image
@@ -154,16 +183,23 @@ export default function DescriptionsDesktop() {
           {/* 6 cards una al lado de la otra (grid) */}
           <div className="grid grid-cols-3 gap-6 flex-1">
             {cards.map((card, i) => {
-              const isActive = activeIndex === i;
+              // 👇 ahora quedan activas todas las <= activeIndex
+              const isActive = activeIndex >= i;
               return (
                 <div key={card.id} className="relative mt-4">
                   <div
-                    className={`solapa absolute h-8 w-20 left-6 bg-[#a780f5] rounded-t-2xl -top-4 z-20 ${!isActive ? "hidden" : ""}`}
+                    className={`solapa absolute h-8 w-20 left-6 bg-[#a780f5] rounded-t-2xl -top-4 z-20 ${
+                      !isActive ? "hidden" : ""
+                    }`}
                   />
                   <section
                     className={`
                       rounded-3xl p-6 h-64 shadow-lg flex flex-col justify-around gap-4 relative z-40 transition-colors
-                      ${!isActive ? "bg-[#3123a0] text-[#a69ad1]" : "bg-white text-[#27067f]"}
+                      ${
+                        !isActive
+                          ? "bg-[#3123a0] text-[#a69ad1]"
+                          : "bg-white text-[#27067f]"
+                      }
                     `}
                   >
                     <h3
