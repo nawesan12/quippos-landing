@@ -67,7 +67,7 @@ export default function TeamBanner() {
   }, []);
 
   return (
-    <section className="flex items-center justify-center max-h-svh  relative overflow-hidden">
+    <section className="flex items-center justify-center max-h-svh relative overflow-hidden">
       {/* Background photos */}
       <Image
         src="/Fotos/foto-mobile.jpg"
@@ -81,11 +81,11 @@ export default function TeamBanner() {
         alt="Foto de equipo"
         width={1000}
         height={1000}
-        className="object-contain md:flex hidden w-screen h-full"
+        className="object-cover md:flex hidden w-screen h-full"
       />
 
       {/* Notification layers */}
-      <section className="absolute top-0 left-0 w-screen h-full">
+      <section className="absolute z-40 top-0 left-0 w-screen h-full">
         <Image
           src="/Otros/items/vacas.svg"
           alt="Quippos Finnegans"
