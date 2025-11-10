@@ -24,12 +24,7 @@ const variants = {
 };
 
 export default function Hero() {
-  const phrases = [
-    "A una fraccion del costo",
-    "Idea brillante",
-    "Proyecto nuevo",
-    "Sueño grande",
-  ];
+  const phrases = ["Con tu cultura", "A tu escala", "A una fracción del costo"];
 
   const [index, setIndex] = useState(0);
 
@@ -60,7 +55,7 @@ export default function Hero() {
             width={1000}
             height={1000}
           />
-          <h2 className="text-3xl lg:text-7xl font-semibold">
+          <h2 className="text-3xl md:text-5xl 2xl:text-7xl font-semibold">
             <span className="text-[#27067f] md:text-white">
               Gestioná tu <i>talento</i>
             </span>{" "}
@@ -106,34 +101,44 @@ export default function Hero() {
 
             <div className="space-y-4 mt-4">
               <div className="space-y-2">
-                <Label>Nombre y Apellido</Label>
+                <Label className="whitespace-nowrap text-xs md:text-base">
+                  Nombre y Apellido
+                </Label>
 
                 <Input className="bg-[#f0f0f0] rounded-full py-2 px-2" />
               </div>
               <div className="space-y-2">
-                <Label>Email laboral</Label>
+                <Label className="whitespace-nowrap text-xs md:text-base">
+                  Email laboral
+                </Label>
 
                 <Input className="bg-[#f0f0f0] rounded-full py-2 px-2" />
               </div>
               <div className="space-y-2">
-                <Label>Industria</Label>
+                <Label className="whitespace-nowrap text-xs md:text-base">
+                  Industria
+                </Label>
 
                 <Input className="bg-[#f0f0f0] rounded-full py-2 px-2" />
               </div>
               <div className="space-y-2">
-                <Label>Pais</Label>
+                <Label className="whitespace-nowrap text-xs md:text-base">
+                  Pais
+                </Label>
 
                 <Input className="bg-[#f0f0f0] rounded-full py-2 px-2" />
               </div>
-              <div className="grid grid-cols-2 gap-2">
-                <div className="space-y-2">
-                  <Label>Cantidad de Empleados</Label>
+              <div className="grid grid-cols-10 gap-2 place-items-center">
+                <div className="space-y-2 col-span-6 w-full">
+                  <Label className="whitespace-nowrap text-xs md:text-base">
+                    Cantidad de Empleados
+                  </Label>
 
                   <Input className="bg-[#f0f0f0] rounded-full py-2 px-2" />
                 </div>
-                <button className="rounded-full bg-[#e8d8ff] text-[#27067f] py-1 font-semibold px-2 max-h-max w-full flex items-center justify-between text-xl md:text-2xl md:pl-6 pl-2">
+                <button className="col-span-4 rounded-full bg-[#e8d8ff] text-[#27067f] md:py-1 py-2 font-semibold px-2 max-h-max w-full flex items-center justify-between text-base md:text-2xl md:pl-6 pl-2 relative top-2 md:top-4">
                   Enviar{" "}
-                  <span className="bg-[#f0f0f0] rounded-full h-8 w-8 grid place-items-center">
+                  <span className="bg-[#f0f0f0] rounded-full h-6 w-6 grid place-items-center">
                     <ArrowRight color="#27067f" />
                   </span>
                 </button>

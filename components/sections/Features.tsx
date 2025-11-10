@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function Features() {
   return (
     <section className="bg-[#01102f] ">
-      <section className="flex items-center justify-around md:flex-row flex-col w-full py-11 md:pt-28 md:max-w-7xl mx-auto">
+      <section className="flex items-center justify-around md:flex-row flex-col w-full py-20 md:pt-28 md:max-w-7xl mx-auto">
         <section className="rounded-4xl border-2 border-white max-w-xs md:scale-125">
           <Image
             src="/Logos/logo finnni.svg"
@@ -42,7 +42,7 @@ export default function Features() {
 
         <section className="list-of-features flex flex-col gap-4 text-white px-6 mt-12 md:mt-0 md:scale-[140%]">
           <article className="p-px rounded-2xl bg-gradient-to-r from-[#ff4131] to-transparent">
-            <div className="rounded-2xl bg-[#551b30] flex items-center gap-4 p-4 px-6">
+            <div className="rounded-2xl bg-[#551b30] hover:brightness-125  transition  flex items-center gap-4 p-4 px-6">
               <Image
                 src="/Iconos/SVG/flecha2.svg"
                 alt="Feature 1"
@@ -60,7 +60,7 @@ export default function Features() {
           </article>
 
           <article className="p-px rounded-2xl bg-gradient-to-r from-[#ff4131] to-transparent">
-            <div className="rounded-2xl bg-[#551b30] flex items-center gap-4 p-4 px-6">
+            <div className="rounded-2xl bg-[#551b30] hover:brightness-125  transition  flex items-center gap-4 p-4 px-6">
               <Image
                 src="/Iconos/SVG/chat2.svg"
                 alt="Feature 1"
@@ -78,7 +78,7 @@ export default function Features() {
           </article>
 
           <article className="p-px rounded-2xl bg-gradient-to-r from-[#ff4131] to-transparent">
-            <div className="rounded-2xl bg-[#551b30] flex items-center gap-4 p-4 px-6">
+            <div className="rounded-2xl bg-[#551b30] hover:brightness-125  transition  flex items-center gap-4 p-4 px-6">
               <Image
                 src="/Iconos/SVG/destello2.svg"
                 alt="Feature 1"
@@ -97,7 +97,7 @@ export default function Features() {
           </article>
 
           <article className="p-px rounded-2xl bg-gradient-to-r from-[#ff4131] to-transparent">
-            <div className="rounded-2xl bg-[#551b30] flex items-center gap-4 p-4 px-6">
+            <div className="rounded-2xl bg-[#551b30] hover:brightness-125  transition  flex items-center gap-4 p-4 px-6">
               <Image
                 src="/Iconos/SVG/lapiz2.svg"
                 alt="Feature 1"
