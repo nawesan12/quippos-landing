@@ -45,14 +45,13 @@ const cards = [
 ];
 
 export default function DescriptionsDesktop() {
-  // MOBILE: índice activo para el carrusel horizontal
+  // MOBILE
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
-  // DESKTOP: controla qué tan “adelante” están prendidas las tarjetas
-  // null = todas prendidas (estado inicial)
-  const [desktopActiveIndex, setDesktopActiveIndex] = useState<number | null>(
-    null,
+  // DESKTOP: active states per card
+  const [desktopActiveStates, setDesktopActiveStates] = useState<boolean[]>(
+    Array(cards.length).fill(true), // all start ON
   );
 
   const handleScroll = (e: UIEvent<HTMLDivElement>) => {
@@ -80,12 +79,19 @@ export default function DescriptionsDesktop() {
     });
   };
 
+  const toggleCard = (index: number) => {
+    setDesktopActiveStates((prev) => {
+      const newStates = [...prev];
+      newStates[index] = !newStates[index];
+      return newStates;
+    });
+  };
+
   return (
     <section className="bg-[#27067f] py-12 md:block hidden md:h-svh ">
       <div className="mx-auto w-full max-w-7xl flex flex-col gap-8 px-4 lg:flex-row lg:items-stretch">
-        {/* MOBILE (dentro de este componente): controllers horizontales + carrusel */}
+        {/* MOBILE */}
         <div className="w-full flex flex-col items-center gap-6 lg:hidden">
-          {/* Controllers */}
           <ul className="controllers w-full flex gap-px items-center bg-[#1e0560] rounded-2xl overflow-hidden">
             {cards.map((card, i) => (
               <li
@@ -111,7 +117,6 @@ export default function DescriptionsDesktop() {
             ))}
           </ul>
 
-          {/* Horizontal carousel */}
           <div
             ref={scrollRef}
             className="flex w-full snap-x overflow-x-auto overflow-y-hidden snap-mandatory scroll-smooth"
@@ -136,24 +141,20 @@ export default function DescriptionsDesktop() {
           </div>
         </div>
 
-        {/* DESKTOP: controllers verticales + 6 cards lado a lado */}
+        {/* DESKTOP */}
         <div className="hidden w-full lg:flex gap-8 py-11">
-          {/* Controllers verticales */}
+          {/* Controllers */}
           <ul className="controllers flex flex-col gap-px bg-[#1e0560] rounded-2xl overflow-hidden w-20 h-full">
             {cards.map((card, i) => (
               <li
                 key={card.id}
                 className={`
                    flex flex-1 min-h-[4rem] items-center justify-center cursor-pointer transition-colors
-                   ${desktopActiveIndex === null || desktopActiveIndex >= i ? "bg-[#a780f5]" : "bg-transparent"}
+                   ${desktopActiveStates[i] ? "bg-[#a780f5]" : "bg-transparent"}
                    ${i === 0 ? "rounded-t-2xl" : ""}
                    ${i === cards.length - 1 ? "rounded-b-2xl" : ""}
                  `}
-                onClick={() =>
-                  setDesktopActiveIndex(
-                    (prev) => (prev === i ? null : i), // tocar el mismo resetea a “todas prendidas”
-                  )
-                }
+                onClick={() => toggleCard(i)}
               >
                 <Image
                   src={card.icon}
@@ -165,12 +166,10 @@ export default function DescriptionsDesktop() {
             ))}
           </ul>
 
-          {/* 6 cards una al lado de la otra (grid) */}
+          {/* Cards */}
           <div className="grid grid-cols-3 gap-6 flex-1">
             {cards.map((card, i) => {
-              const isActive =
-                desktopActiveIndex === null || desktopActiveIndex >= i;
-
+              const isActive = desktopActiveStates[i];
               return (
                 <div key={card.id} className="relative mt-4">
                   <div
@@ -201,10 +200,9 @@ export default function DescriptionsDesktop() {
                       {card.titulo}
                     </h3>
                     <p
-                      className={`
-                        font-medium text-lg
-                        ${!isActive ? "text-[#a69ad1]" : "text-[#27067f]"}
-                      `}
+                      className={`font-medium text-lg ${
+                        !isActive ? "text-[#a69ad1]" : "text-[#27067f]"
+                      }`}
                     >
                       {card.descripcion}
                     </p>
