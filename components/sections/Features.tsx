@@ -53,7 +53,7 @@ export default function Features() {
 
               <p className="font-medium whitespace-nowrap text-sm">
                 Automatizacion{" "}
-                <span className="italic text-red-600">sin codigo</span>
+                <span className="italic text-[#ff4131]">sin codigo</span>
                 <br /> de procesos repetitivos.
               </p>
             </div>
@@ -71,7 +71,7 @@ export default function Features() {
 
               <p className="font-medium whitespace-nowrap text-sm">
                 Asistente{" "}
-                <span className="italic text-red-600">conversacional</span>
+                <span className="italic text-[#ff4131]">conversacional</span>
                 <br /> para RRHH y colaboradores
               </p>
             </div>
@@ -89,7 +89,7 @@ export default function Features() {
 
               <p className="font-medium whitespace-nowrap text-sm">
                 Mejora la experiencia digital: <br />
-                <span className="italic text-red-600">
+                <span className="italic text-[#ff4131]">
                   Respuestas rapidas y guiadas
                 </span>
               </p>
@@ -108,7 +108,7 @@ export default function Features() {
 
               <p className="font-medium whitespace-nowrap text-sm">
                 Diseño de{" "}
-                <span className="italic text-red-600">procesos a medida</span>
+                <span className="italic text-[#ff4131]">procesos a medida</span>
               </p>
             </div>
           </article>
