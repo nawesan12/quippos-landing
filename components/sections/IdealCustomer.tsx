@@ -28,7 +28,7 @@ export default function IdealCustomer() {
 
           <ul className="text-white px-4 flex flex-col gap-4 md:max-w-sm relative z-20">
             {/* 1 */}
-            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs md:text-lg font-medium">
+            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs md:text-base font-medium">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5, y: 10 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -44,14 +44,14 @@ export default function IdealCustomer() {
                   className="w-full h-full"
                 />
               </motion.div>
-              <p className="ml-8">
+              <p className="ml-8 leading-tight">
                 <span className="text-[#ad7efc]">Grandes empresas</span> que
                 buscan <br /> reducir costos sin perder calidad
               </p>
             </li>
 
             {/* 2 */}
-            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs md:text-lg font-medium">
+            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs md:text-base font-medium">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5, y: 10 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -67,7 +67,7 @@ export default function IdealCustomer() {
                   className="w-full h-full"
                 />
               </motion.div>
-              <p className="ml-8">
+              <p className="ml-8 leading-tight">
                 <span className="text-[#ad7efc]">
                   Pequeñas y Medianas <br /> empresas{" "}
                 </span>
@@ -76,7 +76,7 @@ export default function IdealCustomer() {
             </li>
 
             {/* 3 */}
-            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs md:text-lg font-medium">
+            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs md:text-base font-medium">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5, y: 10 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -92,14 +92,14 @@ export default function IdealCustomer() {
                   className="w-full h-full"
                 />
               </motion.div>
-              <p className="ml-8 whitespace-nowrap">
+              <p className="ml-8 whitespace-nowrap leading-tight">
                 <span className="text-[#ad7efc]">Talentos individuales </span>{" "}
                 que buscan <br /> crecer profesionalmente
               </p>
             </li>
 
             {/* 4 */}
-            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs md:text-lg font-medium">
+            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs md:text-base font-medium">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5, y: 10 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -115,7 +115,7 @@ export default function IdealCustomer() {
                   className="w-full h-full"
                 />
               </motion.div>
-              <p className="ml-8">
+              <p className="ml-8 leading-tight">
                 <span className="text-[#ad7efc]">Equipos de RR.HH. </span> que
                 buscan autonomia y trazabilidad
               </p>
