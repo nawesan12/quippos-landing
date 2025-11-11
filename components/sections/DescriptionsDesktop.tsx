@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect, UIEvent } from "react";
+import { useRef, useState, UIEvent } from "react";
 import Image from "next/image";
 
 const cards = [
@@ -45,8 +45,15 @@ const cards = [
 ];
 
 export default function DescriptionsDesktop() {
+  // MOBILE: índice activo para el carrusel horizontal
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  // DESKTOP: controla qué tan “adelante” están prendidas las tarjetas
+  // null = todas prendidas (estado inicial)
+  const [desktopActiveIndex, setDesktopActiveIndex] = useState<number | null>(
+    null,
+  );
 
   const handleScroll = (e: UIEvent<HTMLDivElement>) => {
     const container = e.currentTarget;
@@ -65,7 +72,6 @@ export default function DescriptionsDesktop() {
     if (!container) return;
 
     const { offsetWidth } = container;
-
     if (!offsetWidth) return;
 
     container.scrollTo({
@@ -73,31 +79,6 @@ export default function DescriptionsDesktop() {
       behavior: "smooth",
     });
   };
-
-  // 🔁 Auto avance cada 2 segundos
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => {
-        const next = prev + 1 >= cards.length ? 0 : prev + 1;
-
-        // sincronizar carrusel horizontal (vista "mobile" dentro de este componente)
-        const container = scrollRef.current;
-        if (container) {
-          const { offsetWidth } = container;
-          if (offsetWidth) {
-            container.scrollTo({
-              left: next * offsetWidth,
-              behavior: "smooth",
-            });
-          }
-        }
-
-        return next;
-      });
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section className="bg-[#27067f] py-12 md:block hidden md:h-svh ">
@@ -164,11 +145,15 @@ export default function DescriptionsDesktop() {
                 key={card.id}
                 className={`
                    flex flex-1 min-h-[4rem] items-center justify-center cursor-pointer transition-colors
-                   ${activeIndex >= i ? "bg-[#a780f5]" : "bg-transparent"}
+                   ${desktopActiveIndex === null || desktopActiveIndex >= i ? "bg-[#a780f5]" : "bg-transparent"}
                    ${i === 0 ? "rounded-t-2xl" : ""}
                    ${i === cards.length - 1 ? "rounded-b-2xl" : ""}
                  `}
-                onClick={() => setActiveIndex(i)}
+                onClick={() =>
+                  setDesktopActiveIndex(
+                    (prev) => (prev === i ? null : i), // tocar el mismo resetea a “todas prendidas”
+                  )
+                }
               >
                 <Image
                   src={card.icon}
@@ -183,8 +168,9 @@ export default function DescriptionsDesktop() {
           {/* 6 cards una al lado de la otra (grid) */}
           <div className="grid grid-cols-3 gap-6 flex-1">
             {cards.map((card, i) => {
-              // 👇 ahora quedan activas todas las <= activeIndex
-              const isActive = activeIndex >= i;
+              const isActive =
+                desktopActiveIndex === null || desktopActiveIndex >= i;
+
               return (
                 <div key={card.id} className="relative mt-4">
                   <div
