@@ -54,11 +54,11 @@ export default function Hero() {
           <Image
             src="/quippos1.png"
             alt="Logo"
-            className="hidden md:block object-contain w-full max-w-3xl relative aspect-auto"
+            className="hidden md:block object-contain w-full max-w-2xl relative aspect-auto"
             width={1000}
             height={1000}
           />
-          <h2 className="text-3xl md:text-5xl 2xl:text-7xl font-semibold">
+          <h2 className="text-3xl md:text-5xl 2xl:text-7xl font-semibold mt-8">
             <span className="text-[#27067f] md:text-white">
               Gestioná tu <i>talento</i>
             </span>{" "}
@@ -98,11 +98,11 @@ export default function Hero() {
 
         <div className="formulario mt-6 pb-10">
           <Card className="relative py-11 md:w-md px-6 outline-none border-none pb-4 rounded-4xl">
-            <CardTitle className="bg-[#27067f] absolute top-0 left-0 font-medium text-xl px-4 rounded-br-3xl py-2 md:text-2xl text-white">
+            <CardTitle className="bg-[#27067f] absolute top-0 left-0 font-medium text-xl px-4 rounded-br-3xl py-2 md:text-2xl text-white ">
               Solicitar demo gratuita
             </CardTitle>
 
-            <div className="space-y-4 mt-4">
+            <div className="space-y-4 mt-8">
               <div className="space-y-2">
                 <Label className="whitespace-nowrap text-xs md:text-base">
                   Nombre y Apellido

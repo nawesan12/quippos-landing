@@ -143,7 +143,7 @@ export default function DescriptionsDesktop() {
               >
                 <div className="solapa absolute h-8 w-20 left-8 bg-[#a780f5] rounded-t-2xl -top-4 z-20" />
                 <section className="bg-white rounded-3xl p-8 text-gray-800 shadow-lg flex flex-col justify-around gap-4 h-64 relative z-40">
-                  <h3 className="text-2xl font-semibold bg-[#e8d8ff] text-[#27067f] p-4 px-6 rounded-2xl whitespace-pre-line">
+                  <h3 className="text-3xl leading-tight font-semibold bg-[#e8d8ff] text-[#27067f] p-4 px-6 rounded-2xl whitespace-pre-line">
                     {card.titulo}
                   </h3>
                   <p className="text-[#27067f] font-medium text-lg">
@@ -173,8 +173,8 @@ export default function DescriptionsDesktop() {
                 <Image
                   src={card.icon}
                   alt={card.titulo}
-                  width={24}
-                  height={24}
+                  width={40}
+                  height={40}
                 />
               </li>
             ))}
@@ -204,7 +204,7 @@ export default function DescriptionsDesktop() {
                   >
                     <h3
                       className={`
-                        text-xl font-semibold p-4 px-6 rounded-2xl whitespace-pre-line
+                        text-2xl font-semibold p-4 px-6 rounded-2xl whitespace-pre-line
                         ${
                           !isActive
                             ? "bg-[#27067f] text-[#a69ad1]"
