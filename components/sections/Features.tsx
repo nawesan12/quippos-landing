@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 export default function Features() {
   return (
-    <section className="bg-[#01102f]">
+    <section className="bg-[#01102f] pb-20 md:pb-0">
       <section className="flex items-center justify-around md:flex-row  min-h-svh flex-col w-full  md:pt-28 md:max-w-7xl mx-auto">
-        <section className="rounded-4xl border-2 border-white max-w-xs md:scale-125">
+        <section className="rounded-4xl border-2 border-white max-w-2xs  md:max-w-xs md:scale-125">
           <Image
             src="/Logos/logo finnni.svg"
             alt="Logo Finní"
@@ -17,7 +17,7 @@ export default function Features() {
           />
 
           <motion.div
-            className="estampilla bg-no-repeat bg-center relative bg-[url('/hojita-finni-derecha.png')] bg-contain py-8 flex flex-col gap-4 px-10 md:scale-110 md:relative -left-1"
+            className="estampilla bg-no-repeat bg-center relative bg-[url('/hojita-finni-derecha.png')] bg-contain py-8 flex flex-col gap-4 px-10 md:scale-[111%] md:relative -left-1"
             initial={{ rotate: 0 }}
             whileInView={{ rotate: -6 }}
             transition={{
