@@ -88,7 +88,7 @@ export default function AboutFinnegans() {
             Acerca de <br /> Finnegans
           </h2>
           <Image
-            src="/Logos/isologo finnegans.svg"
+            src="/Isotipo Blanco.svg"
             alt="Logo de Finnegans"
             width={200}
             height={200}
@@ -96,7 +96,7 @@ export default function AboutFinnegans() {
           />
 
           <Image
-            src="/Logos/isologo finnegans.svg"
+            src="/Isotipo Blanco.svg"
             alt="Logo de Finnegans"
             width={200}
             height={200}
