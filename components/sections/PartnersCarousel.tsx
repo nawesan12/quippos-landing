@@ -45,14 +45,9 @@ const cards = [
 ];
 
 export default function DescriptionsDesktop() {
-  // MOBILE
-  const [activeIndex, setActiveIndex] = useState(0);
+  // 👇 Arranca con TODAS prendidas (último índice)
+  const [activeIndex, setActiveIndex] = useState(cards.length - 1);
   const scrollRef = useRef<HTMLDivElement | null>(null);
-
-  // DESKTOP: active states per card
-  const [desktopActiveStates, setDesktopActiveStates] = useState<boolean[]>(
-    Array(cards.length).fill(true), // all start ON
-  );
 
   const handleScroll = (e: UIEvent<HTMLDivElement>) => {
     const container = e.currentTarget;
@@ -79,19 +74,12 @@ export default function DescriptionsDesktop() {
     });
   };
 
-  const toggleCard = (index: number) => {
-    setDesktopActiveStates((prev) => {
-      const newStates = [...prev];
-      newStates[index] = !newStates[index];
-      return newStates;
-    });
-  };
-
   return (
     <section className="bg-[#27067f] py-12 md:block hidden md:h-svh ">
       <div className="mx-auto w-full max-w-7xl flex flex-col gap-8 px-4 lg:flex-row lg:items-stretch">
-        {/* MOBILE */}
+        {/* MOBILE (dentro de este componente): controllers horizontales + carrusel */}
         <div className="w-full flex flex-col items-center gap-6 lg:hidden">
+          {/* Controllers */}
           <ul className="controllers w-full flex gap-px items-center bg-[#1e0560] rounded-2xl overflow-hidden">
             {cards.map((card, i) => (
               <li
@@ -117,6 +105,7 @@ export default function DescriptionsDesktop() {
             ))}
           </ul>
 
+          {/* Horizontal carousel */}
           <div
             ref={scrollRef}
             className="flex w-full snap-x overflow-x-auto overflow-y-hidden snap-mandatory scroll-smooth"
@@ -141,20 +130,20 @@ export default function DescriptionsDesktop() {
           </div>
         </div>
 
-        {/* DESKTOP */}
+        {/* DESKTOP: controllers verticales + 6 cards lado a lado */}
         <div className="hidden w-full lg:flex gap-8 py-11">
-          {/* Controllers */}
+          {/* Controllers verticales */}
           <ul className="controllers flex flex-col gap-px bg-[#1e0560] rounded-2xl overflow-hidden w-20 h-full">
             {cards.map((card, i) => (
               <li
                 key={card.id}
                 className={`
                    flex flex-1 min-h-[4rem] items-center justify-center cursor-pointer transition-colors
-                   ${desktopActiveStates[i] ? "bg-[#a780f5]" : "bg-transparent"}
+                   ${activeIndex >= i ? "bg-[#a780f5]" : "bg-transparent"}
                    ${i === 0 ? "rounded-t-2xl" : ""}
                    ${i === cards.length - 1 ? "rounded-b-2xl" : ""}
                  `}
-                onClick={() => toggleCard(i)}
+                onClick={() => setActiveIndex(i)}
               >
                 <Image
                   src={card.icon}
@@ -166,10 +155,10 @@ export default function DescriptionsDesktop() {
             ))}
           </ul>
 
-          {/* Cards */}
+          {/* 6 cards una al lado de la otra (grid) */}
           <div className="grid grid-cols-3 gap-6 flex-1">
             {cards.map((card, i) => {
-              const isActive = desktopActiveStates[i];
+              const isActive = activeIndex >= i;
               return (
                 <div key={card.id} className="relative mt-4">
                   <div
@@ -200,9 +189,10 @@ export default function DescriptionsDesktop() {
                       {card.titulo}
                     </h3>
                     <p
-                      className={`font-medium text-lg ${
-                        !isActive ? "text-[#a69ad1]" : "text-[#27067f]"
-                      }`}
+                      className={`
+                        font-medium text-lg
+                        ${!isActive ? "text-[#a69ad1]" : "text-[#27067f]"}
+                      `}
                     >
                       {card.descripcion}
                     </p>
