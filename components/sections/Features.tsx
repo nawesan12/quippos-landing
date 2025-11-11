@@ -17,7 +17,7 @@ export default function Features() {
           />
 
           <motion.div
-            className="estampilla bg-cover bg-no-repeat bg-center relative bg-white py-8 flex flex-col gap-4 px-8"
+            className="estampilla bg-no-repeat bg-center relative bg-[url('/hojita-finni-derecha.png')] bg-contain py-8 flex flex-col gap-4 px-10 md:scale-110 md:relative -left-1"
             initial={{ rotate: 0 }}
             whileInView={{ rotate: -6 }}
             transition={{
