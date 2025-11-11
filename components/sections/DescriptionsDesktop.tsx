@@ -88,7 +88,7 @@ export default function DescriptionsDesktop() {
   };
 
   return (
-    <section className="bg-[#27067f] py-12 md:block hidden md:h-svh ">
+    <section className="bg-[#27067f] py-12 md:block hidden">
       <div className="mx-auto w-full max-w-7xl flex flex-col gap-8 px-4 lg:flex-row lg:items-stretch">
         {/* MOBILE */}
         <div className="w-full flex flex-col items-center gap-6 lg:hidden">
