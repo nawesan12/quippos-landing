@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function Footer() {
   return (
-    <footer className="bg-[#04102d] py-12 pt-4 md:py-16 text-white relative z-40">
+    <footer className="bg-[#04102d] py-12 pt-4 px-6 md:px-4 md:py-16 text-white relative z-40">
       <div className="mx-auto max-w-7xl px-4 lg:px-0 w-full">
         <div className="flex flex-col items-center justify-between gap-10 pt-12 md:flex-row md:gap-6">
           <img
@@ -11,7 +11,7 @@ export default function Footer() {
           />
 
           <section className="flex items-center w-full justify-between md:justify-evenly">
-            <div className="items-center text-sm md:text-xl font-medium gap-6 text-white flex">
+            <div className="items-center text-sm md:text-xl font-medium gap-2 md:gap-6 text-white flex">
               <a href="#soluciones" className="transition hover:text-[#ad7efc]">
                 Que ofrecemos
               </a>
@@ -68,7 +68,7 @@ export default function Footer() {
             <a href="#home" className="rounded-full  text-sm transition">
               <img
                 src="/ultimo-boton.png"
-                className="w-32 md:w-48 aspect-auto object-contain max-w-max overflow-hidden"
+                className="w-36 md:w-48 aspect-auto object-contain max-w-max overflow-hidden"
                 alt="Finnegans"
                 width={200}
                 height={200}
