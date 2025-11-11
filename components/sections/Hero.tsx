@@ -49,8 +49,8 @@ export default function Hero() {
           height={1000}
         />
       </section>
-      <section className="w-full min-h-[90vh] bg-[#a780f5] text-white rounded-4xl md:rounded-[64px] relative px-6 md:py-0 md:px-40 flex items-center justify-between flex-col md:flex-row pt-32 md:pt-0">
-        <div className="copy">
+      <section className="w-full min-h-[90vh] bg-[#a780f5] text-white rounded-4xl md:rounded-[64px] relative px-8 md:py-0 md:px-40 flex items-center justify-between flex-col md:flex-row pt-32 md:pt-0">
+        <div className="copy w-full">
           <Image
             src="/quippos1.png"
             alt="Logo"
@@ -58,7 +58,7 @@ export default function Hero() {
             width={1000}
             height={1000}
           />
-          <h2 className="text-3xl md:text-5xl 2xl:text-7xl font-semibold mt-8">
+          <h2 className="text-[26px] md:text-5xl 2xl:text-7xl font-semibold md:mt-8 leading-tight">
             <span className="text-[#27067f] md:text-white">
               Gestioná tu <i>talento</i>
             </span>{" "}
@@ -81,7 +81,7 @@ export default function Hero() {
                     animate="center"
                     exit="exit"
                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="absolute inset-0 flex items-center text-xl md:text-3xl md:pl-2 whitespace-nowrap font-medium text-purple-50 leading-6"
+                    className="absolute inset-0 flex items-center text-lg md:text-3xl md:pl-2 whitespace-nowrap font-medium text-purple-50 leading-6"
                   >
                     {phrases[index]}
                   </motion.p>
@@ -90,7 +90,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <p className="text-sm whitespace-nowrap md:text-2xl md:leading-tight font-medium">
+          <p className="text-xs whitespace-nowrap md:text-2xl md:leading-tight font-medium">
             Impulsa el crecimiento de tu equipo con <br /> una plataforma HCM
             que integra la gestión <br /> de procesos y mejora la comunicación.
           </p>
