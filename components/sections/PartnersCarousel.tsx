@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const PARTNERS_STRIP = "/carrusel logos-clientes.svg"; // 👉 tu imagen ancha acá
+const PARTNERS_STRIP = "/carrusel logos-clientes.png"; // 👉 tu imagen ancha acá
 
 export default function PartnetsCarousel() {
   return (
