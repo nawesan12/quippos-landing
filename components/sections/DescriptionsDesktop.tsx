@@ -8,39 +8,40 @@ const cards = [
     id: 1,
     icon: "/Iconos/SVG/mouse1.svg",
     titulo: "100% \n Configurable",
-    descripcion: "Hace que el sistema se adapte a tu forma de trabajar.",
+    descripcion: "Hace que el sistema se \n adapte a tu forma de trabajar.",
   },
   {
     id: 2,
     icon: "/Iconos/SVG/destello1.svg",
     titulo: "IA+ \n No Code",
     descripcion:
-      "Automatiza tus tareas y procesos con inteligencia artificial.",
+      "Automatiza tus tareas y procesos \n con inteligencia artificial.",
   },
   {
     id: 3,
     icon: "/Iconos/SVG/flecha1.svg",
     titulo: "Portal de \n Autogestion",
-    descripcion: "Centraliza la informacion y tramites de tus colaboradores.",
+    descripcion:
+      "Centraliza la informacion y \n tramites de tus colaboradores.",
   },
   {
     id: 4,
     icon: "/Iconos/SVG/trueno1.svg",
     titulo: "Liquidacion \n Automatica",
-    descripcion: "Genera y distribui recibos en segundos, sin errores.",
+    descripcion: "Genera y distribui recibos \n en segundos, sin errores.",
   },
   {
     id: 5,
     icon: "/Iconos/SVG/carpeta1.svg",
     titulo: "Integracion \n Total",
     descripcion:
-      "Conecta el sistema con cualquier ERP o herramienta del mercado.",
+      "Conecta el sistema con \n cualquier ERP o \n herramienta del mercado.",
   },
   {
     id: 6,
     icon: "/Iconos/SVG/reloj1.svg",
     titulo: "Implementación \n Express",
-    descripcion: "Pasa del inicio al uso real en semanas.",
+    descripcion: "Pasa del inicio \n al uso real en semanas.",
   },
 ];
 
@@ -132,7 +133,7 @@ export default function DescriptionsDesktop() {
                   <h3 className="text-3xl leading-tight font-semibold bg-[#e8d8ff] text-[#27067f] p-4 px-6 rounded-2xl whitespace-pre-line">
                     {card.titulo}
                   </h3>
-                  <p className="text-[#27067f] font-medium text-lg">
+                  <p className="text-[#27067f] font-medium text-lg whitespace-pre-line">
                     {card.descripcion}
                   </p>
                 </section>
@@ -189,7 +190,7 @@ export default function DescriptionsDesktop() {
                   >
                     <h3
                       className={`
-                        text-2xl font-semibold p-4 px-6 rounded-2xl whitespace-pre-line
+                        text-2xl font-semibold p-4 px-6 rounded-2xl leading-none whitespace-pre-line
                         ${
                           !isActive
                             ? "bg-[#27067f] text-[#a69ad1]"
@@ -200,7 +201,7 @@ export default function DescriptionsDesktop() {
                       {card.titulo}
                     </h3>
                     <p
-                      className={`font-medium text-lg ${
+                      className={`font-medium text-[17px] pl-5 whitespace-pre-line ${
                         !isActive ? "text-[#a69ad1]" : "text-[#27067f]"
                       }`}
                     >

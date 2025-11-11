@@ -58,7 +58,7 @@ export default function Hero() {
             width={1000}
             height={1000}
           />
-          <h2 className="text-[26px] md:text-5xl 2xl:text-7xl font-semibold md:mt-8 leading-tight">
+          <h2 className="text-[26px] md:text-5xl 2xl:text-7xl font-semibold md:mt-8 leading-none">
             <span className="text-[#27067f] md:text-white">
               Gestioná tu <i>talento</i>
             </span>{" "}
@@ -90,7 +90,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <p className="text-xs whitespace-nowrap md:text-2xl md:leading-tight font-medium">
+          <p className="text-xs whitespace-nowrap md:text-2xl leading-tight font-medium">
             Impulsa el crecimiento de tu equipo con <br /> una plataforma HCM
             que integra la gestión <br /> de procesos y mejora la comunicación.
           </p>
@@ -151,7 +151,15 @@ export default function Hero() {
         </div>
       </section>
 
-      <div className="absolute bottom-0 right-48 rounded-t-3xl bg-[#27067f] md:flex hidden py-6 px-4 pr-8">
+      <motion.div
+        className="absolute bottom-0 right-48 rounded-t-3xl bg-[#27067f] md:flex hidden py-6 px-4 pr-8"
+        animate={{ y: [0, 8, 0] }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
         <Image
           src="/Iconos/SVG/membrete world class.svg"
           alt="Logo"
@@ -164,7 +172,7 @@ export default function Hero() {
           Calidad <br />
           World Class
         </p>
-      </div>
+      </motion.div>
     </section>
   );
 }

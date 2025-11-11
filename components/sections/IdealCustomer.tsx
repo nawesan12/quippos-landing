@@ -22,7 +22,7 @@ export default function IdealCustomer() {
         </h3>
 
         <div className="relative md:max-w-sm">
-          <div className="pointer-events-none absolute left-6 md:left-3 top-6 bottom-6 z-10">
+          <div className="pointer-events-none absolute left-6 md:left-7 top-6 bottom-6 z-10">
             <div className="w-[3px] h-full bg-[#ad7efc]" />
           </div>
 
