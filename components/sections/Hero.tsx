@@ -51,7 +51,7 @@ export default function Hero() {
           <Image
             src="/quippos1.png"
             alt="Logo"
-            className="hidden md:block object-contain w-full max-w-3xl relative -left-14 aspect-auto"
+            className="hidden md:block object-contain w-full max-w-3xl relative aspect-auto"
             width={1000}
             height={1000}
           />
