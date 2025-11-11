@@ -11,14 +11,14 @@ export default function Footer() {
           />
 
           <section className="flex items-center w-full justify-between md:justify-evenly">
-            <div className="items-center text-sm md:text-lg font-medium gap-6 text-white flex">
-              <a href="#soluciones" className="transition hover:text-[#4bc3fe]">
+            <div className="items-center text-sm md:text-xl font-medium gap-6 text-white flex">
+              <a href="#soluciones" className="transition hover:text-[#ad7efc]">
                 Que ofrecemos
               </a>
-              <a href="#academia" className="transition hover:text-[#4bc3fe]">
+              <a href="#academia" className="transition hover:text-[#ad7efc]">
                 Finni IA
               </a>
-              <a href="#impacto" className="transition hover:text-[#4bc3fe]">
+              <a href="#impacto" className="transition hover:text-[#ad7efc]">
                 Contacto
               </a>
             </div>
@@ -32,7 +32,7 @@ export default function Footer() {
               >
                 <Image
                   src="/Instagram.svg"
-                  className="md:size-6 size-4"
+                  className="md:size-8 size-4"
                   alt="Instagram"
                   width={32}
                   height={32}
@@ -48,7 +48,7 @@ export default function Footer() {
               >
                 <Image
                   src="/Linkedin.svg"
-                  className="md:size-8 size-6"
+                  className="md:size-10 size-6"
                   alt="LinkedIn"
                   width={32}
                   height={32}
@@ -68,7 +68,7 @@ export default function Footer() {
             <a href="#home" className="rounded-full  text-sm transition">
               <img
                 src="/ultimo-boton.png"
-                className="w-32 aspect-auto object-contain max-w-max overflow-hidden"
+                className="w-32 md:w-48 aspect-auto object-contain max-w-max overflow-hidden"
                 alt="Finnegans"
                 width={200}
                 height={200}

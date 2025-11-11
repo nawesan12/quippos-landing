@@ -36,7 +36,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center px-4 md:px-11 py-8 relative bg-[#e8d8ff]">
+    <section
+      id="home"
+      className="flex flex-col md:flex-row items-center justify-center px-4 md:px-11 py-8 relative bg-[#e8d8ff]"
+    >
       <section className="bg-white absolute rounded-b-4xl top-0 left-10 z-40 md:hidden block p-4 pt-14">
         <Image
           src="/Logos/quippos2.svg"
