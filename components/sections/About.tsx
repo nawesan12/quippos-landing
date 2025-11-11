@@ -92,7 +92,7 @@ export default function AboutFinnegans() {
             alt="Logo de Finnegans"
             width={200}
             height={200}
-            className="h-11 max-w-max md:hidden flex"
+            className="h-14 max-w-max md:hidden flex"
           />
 
           <Image
@@ -111,7 +111,7 @@ export default function AboutFinnegans() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
         >
-          <p className="font-medium text-white text-[17px] md:text-[22px] md:mt-0 mt-8">
+          <p className="font-medium text-white text-sm md:text-[22px] md:mt-0 mt-8">
             Somos una empresa de software <br className="md:hidden block" />{" "}
             enfocada en <br className="hidden md:block" /> ofrecer soluciones{" "}
             <br className="md:hidden block" /> tecnologicas integrales para la
