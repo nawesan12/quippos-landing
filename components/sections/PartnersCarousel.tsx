@@ -30,8 +30,8 @@ export default function PartnetsCarousel() {
                 alt="Nuestros partners"
                 width={1920}
                 height={200}
-                className="h-auto object-cover
-                  w-[200vw] md:w-screen" // 👈 clave: más ancho en mobile
+                className="md:h-auto h-16 object-cover
+                  w-full md:w-screen" // 👈 clave: más ancho en mobile
                 priority
               />
             </div>
@@ -43,8 +43,8 @@ export default function PartnetsCarousel() {
                 alt="Nuestros partners (loop)"
                 width={1920}
                 height={200}
-                className="h-auto object-cover
-                  w-[200vw] md:w-screen"
+                className="md:h-auto h-16 object-cover
+                  w-full md:w-screen"
               />
             </div>
           </motion.div>
