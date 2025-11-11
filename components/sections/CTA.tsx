@@ -24,8 +24,8 @@ export default function CTA() {
             </span>
           </h3>
 
-          <p className="text-white font-medium whitespace-nowrap text-sm md:text-right md:text-xl">
-            Transforma la comunicacion interna en <br /> un dialogo mas simple,
+          <p className="text-white font-medium whitespace-nowrap text-sm md:text-right md:text-xl leading-tight">
+            Transforma la comunicación interna en <br /> un diálogo más simple,
             humano y cercano.
           </p>
 
