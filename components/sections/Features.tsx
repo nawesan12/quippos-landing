@@ -31,7 +31,7 @@ export default function Features() {
               Nuestra IA
             </h3>
 
-            <p className="font-medium">
+            <p className="font-medium leading-tight">
               Diseñada para liberar a tu equipo de lo operativo, <br />
               impulsando su evolución profesional y el desarrollo
               <br />
