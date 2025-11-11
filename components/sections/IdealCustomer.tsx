@@ -22,19 +22,19 @@ export default function IdealCustomer() {
         </h3>
 
         <div className="relative md:max-w-sm">
-          <div className="pointer-events-none absolute left-3 top-6 bottom-6 z-10">
+          <div className="pointer-events-none absolute left-6 md:left-3 top-6 bottom-6 z-10">
             <div className="w-[3px] h-full bg-[#ad7efc]" />
           </div>
 
-          <ul className="text-white flex flex-col gap-4 md:max-w-sm relative z-20">
+          <ul className="text-white px-4 flex flex-col gap-4 md:max-w-sm relative z-20">
             {/* 1 */}
-            <li className="relative rounded-full bg-[#27067f] p-4 px-4 text-[14px] md:text-lg font-medium">
+            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs md:text-lg font-medium">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5, y: 10 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="absolute size-12 top-3 md:top-4 -left-3 z-20"
+                className="absolute size-10 md:size-12 top-3 md:top-4 -left-3 z-20"
               >
                 <Image
                   src="/Iconos/SVG/+.svg"
@@ -46,18 +46,18 @@ export default function IdealCustomer() {
               </motion.div>
               <p className="ml-8">
                 <span className="text-[#ad7efc]">Grandes empresas</span> que
-                buscan reducir costos sin perder calidad
+                buscan <br /> reducir costos sin perder calidad
               </p>
             </li>
 
             {/* 2 */}
-            <li className="relative rounded-full bg-[#27067f] p-4 px-4 text-[14px] md:text-lg font-medium">
+            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs md:text-lg font-medium">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5, y: 10 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-                className="absolute size-12 top-3 md:top-5 -left-3 z-20"
+                className="absolute size-10 md:size-12 top-3 md:top-5 -left-3 z-20"
               >
                 <Image
                   src="/Iconos/SVG/+.svg"
@@ -76,13 +76,13 @@ export default function IdealCustomer() {
             </li>
 
             {/* 3 */}
-            <li className="relative rounded-full bg-[#27067f] p-4 px-4 text-[14px] md:text-lg font-medium">
+            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs md:text-lg font-medium">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5, y: 10 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-                className="absolute size-12 top-3 md:top-4 -left-3 z-20"
+                className="absolute size-10 md:size-12 top-3 md:top-4 -left-3 z-20"
               >
                 <Image
                   src="/Iconos/SVG/+.svg"
@@ -99,13 +99,13 @@ export default function IdealCustomer() {
             </li>
 
             {/* 4 */}
-            <li className="relative rounded-full bg-[#27067f] p-4 px-4 text-[14px] md:text-lg font-medium">
+            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs md:text-lg font-medium">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5, y: 10 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
-                className="absolute size-12 top-3 md:top-4 -left-3 z-20"
+                className="absolute size-10 md:size-12 top-3 md:top-4 -left-3 z-20"
               >
                 <Image
                   src="/Iconos/SVG/+.svg"

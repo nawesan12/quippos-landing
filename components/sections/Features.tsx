@@ -17,7 +17,7 @@ export default function Features() {
           />
 
           <motion.div
-            className="estampilla bg-no-repeat bg-center relative bg-[url('/hojita-finni-derecha.png')] bg-contain py-8 flex flex-col gap-4 px-10 md:scale-[111%] md:relative -left-1"
+            className="estampilla bg-no-repeat bg-center relative bg-[url('/hojita-finni-derecha.png')] bg-contain py-8 flex flex-col gap-4 px-6 md:px-10 md:scale-[111%] md:relative  -left-1"
             initial={{ rotate: 0 }}
             whileInView={{ rotate: -6 }}
             transition={{
@@ -31,7 +31,7 @@ export default function Features() {
               Nuestra IA
             </h3>
 
-            <p className="font-medium leading-tight">
+            <p className="font-medium leading-tight pb-11 md:pb-0">
               Diseñada para liberar a tu equipo de lo operativo, <br />
               impulsando su evolución profesional y el desarrollo
               <br />

@@ -6,14 +6,7 @@ export default function QuipposBanner() {
       <Image
         src="/Logos/quippos1.svg"
         alt="Quippos Banner"
-        className="w-full md:max-w-7xl md:flex hidden"
-        width={1000}
-        height={400}
-      />
-      <Image
-        src="/Logos/quippos2.svg"
-        alt="Quippos Banner"
-        className="w-full md:max-w-7xl md:hidden flex"
+        className="w-full md:max-w-7xl"
         width={1000}
         height={400}
       />
