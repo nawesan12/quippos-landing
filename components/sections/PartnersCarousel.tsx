@@ -18,7 +18,7 @@ export default function PartnetsCarousel() {
             className="flex"
             animate={{ x: ["0%", "-50%"] }}
             transition={{
-              duration: 30,
+              duration: 20,
               ease: "linear",
               repeat: Infinity,
             }}
