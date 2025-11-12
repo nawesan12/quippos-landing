@@ -40,7 +40,7 @@ export default function Features() {
           </motion.div>
         </section>
 
-        <section className="list-of-features flex flex-col gap-4 text-white px-6 mt-12 md:mt-0 md:scale-[140%]">
+        <section className="list-of-features flex flex-col gap-4 text-white px-6 mt-12 md:mt-0 scale-95 md:scale-[140%]">
           <article className="p-px rounded-2xl bg-gradient-to-r from-[#ff4131] to-transparent">
             <div className="rounded-2xl bg-[#551b30] hover:brightness-125  transition  flex items-center gap-4 p-4 px-6">
               <Image

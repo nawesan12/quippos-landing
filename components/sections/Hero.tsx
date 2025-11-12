@@ -102,46 +102,46 @@ export default function Hero() {
               Solicitar demo gratuita
             </CardTitle>
 
-            <div className="space-y-2 md:space-y-4 mt-1 md:mt-8">
-              <div className="space-y-2">
+            <div className="space-y-1 md:space-y-4 mt-1 md:mt-8">
+              <div className="space-y-1 md:space-y-2">
                 <Label className="whitespace-nowrap text-[10px] md:text-base">
                   Nombre y Apellido
                 </Label>
 
-                <Input className="bg-[#f0f0f0] rounded-full py-1 md:py-2 px-2" />
+                <Input className="bg-[#f0f0f0] h-6 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
               </div>
-              <div className="space-y-2">
+              <div className="space-y-1 md:space-y-2">
                 <Label className="whitespace-nowrap text-[10px] md:text-base">
                   Email laboral
                 </Label>
 
-                <Input className="bg-[#f0f0f0] rounded-full py-1 md:py-2 px-2" />
+                <Input className="bg-[#f0f0f0] h-6 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
               </div>
-              <div className="space-y-2">
+              <div className="space-y-1 md:space-y-2">
                 <Label className="whitespace-nowrap text-[10px] md:text-base">
                   Industria
                 </Label>
 
-                <Input className="bg-[#f0f0f0] rounded-full py-1 md:py-2 px-2" />
+                <Input className="bg-[#f0f0f0] h-6 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
               </div>
-              <div className="space-y-2">
+              <div className="space-y-1 md:space-y-2">
                 <Label className="whitespace-nowrap text-[10px] md:text-base">
                   Pais
                 </Label>
 
-                <Input className="bg-[#f0f0f0] rounded-full py-1 md:py-2 px-2" />
+                <Input className="bg-[#f0f0f0] h-6 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
               </div>
               <div className="grid grid-cols-10 gap-2 place-items-center">
-                <div className="space-y-2 col-span-6 w-full">
+                <div className="space-y-1 md:space-y-2 col-span-6 w-full">
                   <Label className="whitespace-nowrap text-[10px] md:text-base">
                     Cantidad de Empleados
                   </Label>
 
-                  <Input className="bg-[#f0f0f0] rounded-full py-1 md:py-2 px-2" />
+                  <Input className="bg-[#f0f0f0] h-6 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
                 </div>
-                <button className="col-span-4 rounded-full bg-[#e8d8ff] text-[#27067f] md:py-1 py-2 font-semibold px-1 md:px-2 max-h-max w-full flex items-center justify-between text-sm md:text-2xl md:pl-6 pl-2 relative top-2 md:top-4">
+                <button className="col-span-4 rounded-full bg-[#e8d8ff] text-[#27067f] md:py-1 py-1 font-semibold px-1 md:px-2 max-h-max w-full flex items-center justify-between text-xs md:text-2xl md:pl-6 pl-2 relative top-2 md:top-4">
                   Enviar{" "}
-                  <span className="bg-[#f0f0f0] rounded-full h-6 w-6 grid place-items-center">
+                  <span className="bg-[#f0f0f0] rounded-full  md:h-6 md:w-6 grid place-items-center">
                     <ArrowRight color="#27067f" />
                   </span>
                 </button>

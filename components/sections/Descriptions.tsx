@@ -8,7 +8,7 @@ const cards = [
     id: 1,
     icon: "/Iconos/SVG/mouse1.svg",
     titulo: "100% \n Configurable",
-    descripcion: "Hace que el sistema se adapte a tu forma de trabajar.",
+    descripcion: "Hace que el sistema se \n adapte a tu forma de trabajar.",
   },
   {
     id: 2,
@@ -21,26 +21,27 @@ const cards = [
     id: 3,
     icon: "/Iconos/SVG/flecha1.svg",
     titulo: "Portal de \n Autogestion",
-    descripcion: "Centraliza la informacion y tramites de tus colaboradores.",
+    descripcion:
+      "Centraliza la informacion y \n tramites de tus colaboradores.",
   },
   {
     id: 4,
     icon: "/Iconos/SVG/trueno1.svg",
     titulo: "Liquidacion \n Automatica",
-    descripcion: "Genera y distribui recibos en segundos, sin errores.",
+    descripcion: "Genera y distribui recibos \n en segundos, sin errores.",
   },
   {
     id: 5,
     icon: "/Iconos/SVG/carpeta1.svg",
     titulo: "Integracion \n Total",
     descripcion:
-      "Conecta el sistema con cualquier ERP o herramienta del mercado.",
+      "Conecta el sistema \n con cualquier ERP o \n herramienta del mercado.",
   },
   {
     id: 6,
     icon: "/Iconos/SVG/reloj1.svg",
     titulo: "Implementación \n Express",
-    descripcion: "Pasa del inicio al uso real en semanas.",
+    descripcion: "Pasa del inicio \n al uso real en semanas.",
   },
 ];
 
@@ -106,10 +107,10 @@ export default function Descriptions() {
             >
               <div className="solapa absolute  h-8 w-20 left-8 bg-[#a780f5] rounded-t-2xl -top-4 z-20"></div>
               <section className="bg-white rounded-3xl p-8 text-gray-800 shadow-lg flex flex-col justify-around gap-4 h-64 relative z-40">
-                <h3 className="text-2xl font-semibold bg-[#e8d8ff] text-[#27067f] p-4 px-6 rounded-2xl">
+                <h3 className="text-2xl font-semibold bg-[#e8d8ff] text-[#27067f] p-4 px-6 rounded-2xl whitespace-pre-line leading-tight">
                   {card.titulo}
                 </h3>
-                <p className="text-[#27067f] font-medium text-lg ">
+                <p className="text-[#27067f] font-medium text-base px-6 whitespace-pre-line leading-tight">
                   {card.descripcion}
                 </p>
               </section>
