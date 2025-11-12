@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
+import { animate, motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-
 type StatCounterProps = {
   end: number;
   prefix?: string;
@@ -16,47 +15,28 @@ function StatCounter({
   end,
   prefix = "+",
   suffix = "",
-  duration = 700,
+  duration = 2000,
   startFactor = 0.85,
 }: StatCounterProps) {
   const ref = useRef<HTMLSpanElement | null>(null);
   const inView = useInView(ref, { once: true, amount: 0.4 });
-  const [value, setValue] = useState(end);
+
+  // calcular start una sola vez para este render
+  const startRaw = Math.floor(end * startFactor);
+  const start = Math.max(0, Math.min(startRaw, end - 1));
+  const [value, setValue] = useState(start); // ⬅️ arranca en start (no en end)
 
   useEffect(() => {
-    if (!inView) return;
+    if (!inView || end <= start) return;
 
-    const startRaw = Math.floor(end * startFactor);
-    const start = Math.max(0, Math.min(startRaw, end - 1)); // aseguramos < end
-    const diff = end - start;
+    const controls = animate(start, end, {
+      duration: duration / 1000, // framer usa segundos
+      ease: [0.33, 1, 0.68, 1], // easeOutCubic
+      onUpdate: (latest) => setValue(Math.round(latest)),
+    });
 
-    if (diff <= 0) {
-      setValue(end);
-      return;
-    }
-
-    const frameDuration = 30; // ms
-    const totalFrames = Math.round(duration / frameDuration);
-    let frame = 0;
-
-    setValue(start);
-
-    const interval = setInterval(() => {
-      frame++;
-      const progress = frame / totalFrames;
-      const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic suave
-      const current = start + diff * eased;
-
-      if (frame >= totalFrames) {
-        setValue(end);
-        clearInterval(interval);
-      } else {
-        setValue(Math.round(current));
-      }
-    }, frameDuration);
-
-    return () => clearInterval(interval);
-  }, [inView, end, duration, startFactor]);
+    return () => controls.stop();
+  }, [inView, start, end, duration]);
 
   return (
     <span ref={ref}>

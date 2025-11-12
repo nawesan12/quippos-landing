@@ -168,10 +168,10 @@ export default function Hero() {
           alt="Logo"
           width={100}
           height={100}
-          className="h-16"
+          className="md:h-14 2xl:h-16"
         />
 
-        <p className="text-[#a780f5] text-2xl font-medium">
+        <p className="text-[#a780f5] md:text-xl 2xl:text-2xl font-medium">
           Calidad <br />
           World Class
         </p>
