@@ -36,7 +36,7 @@ export default function TeamBannerMobile() {
 
         {/* Equipo */}
         <motion.div
-          className="absolute top-16 left-1"
+          className="absolute top-32 left-1"
           initial={{ opacity: 0, x: -40, y: 16, scale: 0.95 }}
           whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -47,7 +47,7 @@ export default function TeamBannerMobile() {
             alt="Quippos Finnegans"
             width={700}
             height={700}
-            className="object-contain max-w-max h-40"
+            className="object-contain w-36"
           />
         </motion.div>
 
