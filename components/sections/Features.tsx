@@ -7,15 +7,11 @@ import { useRef } from "react";
 export default function Features() {
   const stampRef = useRef<HTMLDivElement | null>(null);
 
-  // Progreso de scroll SOLO para la estampilla (0 cuando entra, 1 cuando sale)
   const { scrollYProgress } = useScroll({
     target: stampRef,
-    // 0 cuando el inicio del target toca el final del viewport,
-    // 1 cuando el final del target toca el inicio del viewport
     offset: ["start end", "end start"],
   });
 
-  // Mapear 0..1 -> 0..-7 grados
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -10]);
 
   return (
