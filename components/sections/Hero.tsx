@@ -38,7 +38,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="flex flex-col md:flex-row items-center justify-center px-4 md:px-11 py-8 relative bg-[#e8d8ff]"
+      className="flex flex-col min-h-svh md:flex-row items-center justify-center px-4 md:px-11 py-8 relative bg-[#e8d8ff]"
     >
       <section className="bg-white absolute rounded-b-4xl top-0 left-10 z-40 md:hidden block p-4 pt-14">
         <Image
@@ -66,13 +66,16 @@ export default function Hero() {
           </h2>
 
           <div className="md:p-2 px-1 py-1 flex items-center w-full md:max-w-md bg-[#9a69f9] rounded-full my-6 md:my-11">
-            <span className="bg-[#27067f] rounded-full h-9 w-9 flex items-center justify-center">
-              <Plus className="w-7 h-7 text-[#f0f0f0]" strokeWidth={3} />
+            <span className="bg-[#27067f] rounded-full md:h-9 md:w-9 h-8 w-8  flex items-center justify-center">
+              <Plus
+                className="md:w-7 md:h-7 h-5 w-5 text-[#f0f0f0]"
+                strokeWidth={3}
+              />
             </span>
 
             <div className="ml-3 flex-1 overflow-hidden ">
               {/* “Ventana” fija del elevador */}
-              <div className="relative h-8 overflow-hidden">
+              <div className="relative md:h-8 h-6 overflow-hidden">
                 <AnimatePresence initial={false} mode="wait">
                   <motion.p
                     key={index} // clave distinta para que AnimatePresence detecte el cambio
@@ -81,7 +84,7 @@ export default function Hero() {
                     animate="center"
                     exit="exit"
                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="absolute inset-0 flex items-center text-lg md:text-3xl md:pl-2 whitespace-nowrap font-medium text-purple-50 leading-6"
+                    className="absolute inset-0 flex items-center text-base md:text-3xl md:pl-2 whitespace-nowrap font-medium text-purple-50 leading-6"
                   >
                     {phrases[index]}
                   </motion.p>
