@@ -7,7 +7,7 @@ export default function IdealCustomer() {
   return (
     <section className="flex md:flex-row flex-col items-center min-h-svh justify-center md:justify-evenly bg-[#01102f] px-8 md:py-20 pb-20 md:pb-0 md:pt-8">
       <section className="w-full md:max-w-sm md:scale-125">
-        <h3 className="text-white my-8 text-5xl font-medium">
+        <h3 className="text-white my-8 text-5xl font-medium relative left-6 md:left-0">
           <span className="text-[#ad7efc] relative mr-3">
             Ideal
             <Image
