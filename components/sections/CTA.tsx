@@ -20,16 +20,16 @@ export default function CTA() {
             El futuro de la <br className="md:hidden block" /> gestión del
             talento, <br />
             <span className="text-[#a780f5] whitespace-nowrap">
-              sin limites ni barreras.
+              sin límites ni barreras.
             </span>
           </h3>
 
           <p className="text-white font-medium whitespace-nowrap text-sm md:text-right md:text-xl leading-tight">
-            Transforma la comunicación interna en <br /> un diálogo más simple,
+            Transformá la comunicación interna en <br /> un diálogo más simple,
             humano y cercano.
           </p>
 
-          <Button className="rounded-full p-4 py-5 md:py-6 md:px-8 bg-[#6e42c8] text-white text-sm max-w-max md:self-end md:text-lg">
+          <Button className="cursor-pointer rounded-full p-4 py-5 md:py-6 md:px-8 bg-[#6e42c8] text-white text-sm max-w-max md:self-end md:text-lg">
             Agendá una demo ahora
           </Button>
         </div>

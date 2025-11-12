@@ -52,8 +52,8 @@ export default function Features() {
               />
 
               <p className="font-medium whitespace-nowrap text-sm">
-                Automatizacion{" "}
-                <span className="italic text-[#ff4131]">sin codigo</span>
+                Automatización{" "}
+                <span className="italic text-[#ff4131]">sin código</span>
                 <br /> de procesos repetitivos.
               </p>
             </div>
@@ -90,7 +90,7 @@ export default function Features() {
               <p className="font-medium whitespace-nowrap text-sm">
                 Mejora la experiencia digital: <br />
                 <span className="italic text-[#ff4131]">
-                  Respuestas rapidas y guiadas
+                  Respuestas rápidas y guiadas
                 </span>
               </p>
             </div>

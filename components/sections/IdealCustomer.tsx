@@ -117,7 +117,7 @@ export default function IdealCustomer() {
               </motion.div>
               <p className="ml-8 leading-tight">
                 <span className="text-[#ad7efc]">Equipos de RR.HH. </span> que
-                buscan <br /> autonomia y trazabilidad
+                buscan <br /> autonomía y trazabilidad
               </p>
             </li>
           </ul>

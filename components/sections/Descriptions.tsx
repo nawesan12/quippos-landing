@@ -8,40 +8,40 @@ const cards = [
     id: 1,
     icon: "/Iconos/SVG/mouse1.svg",
     titulo: "100% \n Configurable",
-    descripcion: "Hace que el sistema se \n adapte a tu forma de trabajar.",
+    descripcion: "Hacé que el sistema se \n adapte a tu forma de trabajar.",
   },
   {
     id: 2,
     icon: "/Iconos/SVG/destello1.svg",
     titulo: "IA+ \n No Code",
     descripcion:
-      "Automatiza tus tareas y procesos con inteligencia artificial.",
+      "Automatizá tus tareas y procesos con inteligencia artificial.",
   },
   {
     id: 3,
     icon: "/Iconos/SVG/flecha1.svg",
     titulo: "Portal de \n Autogestion",
     descripcion:
-      "Centraliza la informacion y \n tramites de tus colaboradores.",
+      "Centralizá la información y \n tramites de tus colaboradores.",
   },
   {
     id: 4,
     icon: "/Iconos/SVG/trueno1.svg",
-    titulo: "Liquidacion \n Automatica",
-    descripcion: "Genera y distribui recibos \n en segundos, sin errores.",
+    titulo: "Liquidación \n Automática",
+    descripcion: "Generá y distribuí recibos \n en segundos, sin errores.",
   },
   {
     id: 5,
     icon: "/Iconos/SVG/carpeta1.svg",
-    titulo: "Integracion \n Total",
+    titulo: "Integración \n Total",
     descripcion:
-      "Conecta el sistema \n con cualquier ERP o \n herramienta del mercado.",
+      "Conectá el sistema \n con cualquier ERP o \n herramienta del mercado.",
   },
   {
     id: 6,
     icon: "/Iconos/SVG/reloj1.svg",
     titulo: "Implementación \n Express",
-    descripcion: "Pasa del inicio \n al uso real en semanas.",
+    descripcion: "Pasá del inicio \n al uso real en semanas.",
   },
 ];
 

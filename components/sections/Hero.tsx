@@ -54,7 +54,7 @@ export default function Hero() {
           <Image
             src="/quippos1.png"
             alt="Logo"
-            className="hidden md:block object-contain w-full max-w-2xl relative aspect-auto"
+            className="hidden md:block object-contain w-full md:max-w-xl 2xl:max-w-2xl relative aspect-auto"
             width={1000}
             height={1000}
           />
@@ -94,7 +94,7 @@ export default function Hero() {
           </div>
 
           <p className="text-xs whitespace-nowrap md:text-2xl leading-tight font-medium">
-            Impulsa el crecimiento de tu equipo con <br /> una plataforma HCM
+            Impulsá el crecimiento de tu equipo con <br /> una plataforma HCM
             que integra la gestión <br /> de procesos y mejora la comunicación.
           </p>
         </div>
@@ -129,7 +129,7 @@ export default function Hero() {
               </div>
               <div className="space-y-1 md:space-y-2">
                 <Label className="whitespace-nowrap text-[10px] md:text-base">
-                  Pais
+                  País
                 </Label>
 
                 <Input className="bg-[#f0f0f0] h-6 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
