@@ -17,7 +17,7 @@ export default function PartnetsCarousel() {
           className="flex w-max"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
-            duration: 20,
+            duration: 30,
             ease: "linear",
             repeat: Infinity,
             repeatType: "loop",
