@@ -99,7 +99,7 @@ export default function IdealCustomer() {
             </li>
 
             {/* 4 */}
-            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs md:text-base font-medium">
+            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs   md:text-base font-medium">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5, y: 10 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}

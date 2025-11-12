@@ -51,11 +51,19 @@ export default function Descriptions() {
 
   const handleScroll = (e: UIEvent<HTMLDivElement>) => {
     const container = e.currentTarget;
-    const { scrollLeft, offsetWidth } = container;
+    const { scrollLeft } = container;
 
-    if (!offsetWidth) return;
+    const firstChild = container.firstElementChild as HTMLElement | null;
+    if (!firstChild) return;
 
-    const index = Math.round(scrollLeft / offsetWidth);
+    // ancho real de cada card + gap
+    const style = window.getComputedStyle(firstChild);
+    const marginRight = parseFloat(style.marginRight || "0");
+    const cardWidth = firstChild.offsetWidth + marginRight;
+
+    if (!cardWidth) return;
+
+    const index = Math.round(scrollLeft / cardWidth);
     if (index !== activeIndex) {
       setActiveIndex(index);
     }
@@ -65,17 +73,22 @@ export default function Descriptions() {
     const container = scrollRef.current;
     if (!container) return;
 
-    const { offsetWidth } = container;
+    const firstChild = container.firstElementChild as HTMLElement | null;
+    if (!firstChild) return;
+
+    const style = window.getComputedStyle(firstChild);
+    const marginRight = parseFloat(style.marginRight || "0");
+    const cardWidth = firstChild.offsetWidth + marginRight;
 
     container.scrollTo({
-      left: index * offsetWidth,
+      left: index * cardWidth,
       behavior: "smooth",
     });
   };
 
   return (
     <section className="bg-[#27067f] py-12 md:hidden block">
-      <div className="mx-auto flex w-full  flex-col items-center gap-6 px-4">
+      <div className="mx-auto flex w-full flex-col items-center gap-6 px-4">
         {/* Controllers */}
         <ul className="controllers w-full flex gap-px items-center bg-[#1e0560] rounded-2xl overflow-hidden">
           {cards.map((card, i) => (
@@ -97,15 +110,15 @@ export default function Descriptions() {
         {/* Horizontal carousel */}
         <div
           ref={scrollRef}
-          className="flex w-full max-w-svw snap-x overflow-x-auto overflow-y- snap-mandatory  scroll-smooth"
+          className="flex w-full snap-x snap-mandatory overflow-x-auto overflow-y-hidden scroll-smooth px-4 gap-4"
           onScroll={handleScroll}
         >
           {cards.map((card) => (
             <div
               key={card.id}
-              className="min-w-full snap-center p-1 relative mt-4"
+              className="snap-center shrink-0 basis-[97%] relative mt-4"
             >
-              <div className="solapa absolute  h-8 w-20 left-8 bg-[#a780f5] rounded-t-2xl -top-4 z-20"></div>
+              <div className="solapa absolute h-8 w-20 left-8 bg-[#a780f5] rounded-t-2xl -top-4 z-20" />
               <section className="bg-white rounded-3xl p-8 text-gray-800 shadow-lg flex flex-col justify-around gap-4 h-64 relative z-40">
                 <h3 className="text-2xl font-semibold bg-[#e8d8ff] text-[#27067f] p-4 px-6 rounded-2xl whitespace-pre-line leading-tight">
                   {card.titulo}
