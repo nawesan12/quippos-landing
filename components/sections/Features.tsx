@@ -1,9 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export default function Features() {
+  const stampRef = useRef<HTMLDivElement | null>(null);
+
+  // Progreso de scroll SOLO para la estampilla (0 cuando entra, 1 cuando sale)
+  const { scrollYProgress } = useScroll({
+    target: stampRef,
+    // 0 cuando el inicio del target toca el final del viewport,
+    // 1 cuando el final del target toca el inicio del viewport
+    offset: ["start end", "end start"],
+  });
+
+  // Mapear 0..1 -> 0..-7 grados
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, -10]);
+
   return (
     <section className="bg-[#01102f] pt-20 md:pt-0 pb-20 md:pb-0">
       <section className="flex items-center justify-around md:flex-row  min-h-svh flex-col w-full  md:pt-28 md:max-w-7xl mx-auto">
@@ -17,15 +31,9 @@ export default function Features() {
           />
 
           <motion.div
+            ref={stampRef}
             className="estampilla bg-no-repeat bg-center relative bg-[url('/hojita-finni-derecha.png')] bg-contain py-8 flex flex-col gap-4 px-6 md:px-10 md:scale-[111%] md:relative  -left-1"
-            initial={{ rotate: 0 }}
-            whileInView={{ rotate: -6 }}
-            transition={{
-              delay: 1, // wait 1 second after appearing in viewport
-              duration: 0.6, // smooth, short tilt
-              ease: "easeOut",
-            }}
-            viewport={{ once: true, amount: 0.5 }} // trigger once when 50% visible
+            style={{ rotate }}
           >
             <h3 className="bg-[#ff4131] text-[#faf5f2] rounded-full py-2 px-6 text-2xl font-semibold max-w-max relative -left-15">
               Nuestra IA
@@ -50,7 +58,6 @@ export default function Features() {
                 height={100}
                 className="h-10 w-10 object-contain"
               />
-
               <p className="font-medium whitespace-nowrap text-sm">
                 Automatización{" "}
                 <span className="italic text-[#ff4131]">sin código</span>
@@ -68,7 +75,6 @@ export default function Features() {
                 height={100}
                 className="h-10 w-10 object-contain"
               />
-
               <p className="font-medium whitespace-nowrap text-sm">
                 Asistente{" "}
                 <span className="italic text-[#ff4131]">conversacional</span>
@@ -86,7 +92,6 @@ export default function Features() {
                 height={100}
                 className="h-10 w-10 object-contain"
               />
-
               <p className="font-medium whitespace-nowrap text-sm">
                 Mejora la experiencia digital: <br />
                 <span className="italic text-[#ff4131]">
@@ -105,7 +110,6 @@ export default function Features() {
                 height={100}
                 className="h-10 w-10 object-contain"
               />
-
               <p className="font-medium whitespace-nowrap text-sm">
                 Diseño de{" "}
                 <span className="italic text-[#ff4131]">procesos a medida</span>
