@@ -142,7 +142,7 @@ export default function Hero() {
 
                   <Input className="bg-[#f0f0f0] h-6 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
                 </div>
-                <button className="col-span-4 rounded-full bg-[#e8d8ff] text-[#27067f] md:py-1 py-1 font-semibold px-1 md:px-2 max-h-max w-full flex items-center justify-between text-xs md:text-2xl md:pl-6 pl-2 relative top-2 md:top-4">
+                <button className="col-span-4 rounded-full cursor-pointer bg-[#e8d8ff] text-[#27067f] md:py-1 py-1 font-semibold px-1 md:px-2 max-h-max w-full flex items-center justify-between text-xs md:text-2xl md:pl-6 pl-2 relative top-2 md:top-4">
                   Enviar{" "}
                   <span className="bg-[#f0f0f0] rounded-full  md:h-6 md:w-6 grid place-items-center">
                     <ArrowRight color="#27067f" />
