@@ -11,8 +11,8 @@ export default function Features() {
           <Image
             src="/Logos/logo finnni.svg"
             alt="Logo Finní"
-            width={240}
-            height={240}
+            width={220}
+            height={220}
             className="mx-auto py-8"
           />
 
@@ -31,7 +31,7 @@ export default function Features() {
               Nuestra IA
             </h3>
 
-            <p className="font-medium leading-tight pb-11 md:pb-0">
+            <p className="font-medium text-sm md:text-base leading-tight pb-4 md:pb-0">
               Diseñada para liberar a tu equipo de lo operativo, <br />
               impulsando su evolución profesional y el desarrollo
               <br />
