@@ -7,7 +7,7 @@ const PARTNERS_STRIP = "/carrusel logos-clientes.png";
 
 export default function PartnetsCarousel() {
   return (
-    <section className="w-full">
+    <section className="w-full bg-white">
       <div className="relative overflow-hidden py-6">
         {/* Fades */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent z-10" />
