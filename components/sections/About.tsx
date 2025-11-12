@@ -114,7 +114,7 @@ export default function AboutFinnegans() {
           <p className="font-medium text-white text-sm md:text-[22px] md:mt-0 mt-8">
             Somos una empresa de software <br className="md:hidden block" />{" "}
             enfocada en <br className="hidden md:block" /> ofrecer soluciones{" "}
-            <br className="md:hidden block" /> tecnologicas integrales para la
+            <br className="md:hidden block" /> tecnológicas integrales para la
             <br className="hidden md:block" />
             gestión empresarial. <br /> <br /> Nuestra misión es igualar{" "}
             <br className="md:hidden block" /> oportunidades,
