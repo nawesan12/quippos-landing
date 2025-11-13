@@ -1,5 +1,6 @@
 "use client";
 
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -10,12 +11,11 @@ export default function IdealCustomer() {
         <h3 className="text-white my-8 text-5xl font-medium relative left-6 md:left-0">
           <span className="text-[#ad7efc] relative mr-3">
             Ideal
-            <Image
-              src="/Animaciones/Animacion-trazo.gif"
-              alt="Ideal Customer"
-              width={200}
-              height={200}
-              className="absolute top-0 left-0 scale-150"
+            <DotLottieReact
+              className=" absolute top-0 left-0 scale-[170%]"
+              src="/Animaciones/trazo.lottie"
+              loop
+              autoplay
             />
           </span>{" "}
           para:
@@ -124,12 +124,11 @@ export default function IdealCustomer() {
         </div>
       </section>
 
-      <Image
-        src="/Animaciones/Animacion-mano.gif"
-        alt="Ideal Customer"
-        width={1000}
-        height={1000}
-        className="px-2 md:max-w-xl"
+      <DotLottieReact
+        className="px-2 md:max-w-xl md:scale-200"
+        src="/Animaciones/Animacion mano.lottie"
+        loop
+        autoplay
       />
     </section>
   );
