@@ -43,7 +43,7 @@ export default function Footer() {
               >
                 <Image
                   src={igHover ? "/Instagram violeta.svg" : "/Instagram.svg"}
-                  className="md:size-8 size-4 transition-all"
+                  className="md:size-8 size-4"
                   alt="Instagram"
                   width={32}
                   height={32}
@@ -61,7 +61,7 @@ export default function Footer() {
               >
                 <Image
                   src={lnHover ? "/linedin violeta.svg" : "/Linkedin.svg"}
-                  className="md:size-10 size-6 transition-all"
+                  className={`${lnHover ? "md:size-7 size-6" : "md:size-10 size-6"} object-contain`}
                   alt="LinkedIn"
                   width={32}
                   height={32}
