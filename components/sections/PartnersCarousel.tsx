@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const PARTNERS_STRIP = "/carrusel logos-clientes.png";
+const PARTNERS_STRIP = "/logos-clientes-gris.png";
 
 export default function PartnetsCarousel() {
   return (
