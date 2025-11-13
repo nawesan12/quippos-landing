@@ -42,8 +42,10 @@ export default function Footer() {
                 onMouseLeave={() => setIgHover(false)}
               >
                 <Image
-                  src={igHover ? "/Instagram violeta.svg" : "/Instagram.svg"}
-                  className="md:size-8 size-4"
+                  src={
+                    igHover ? "/Instagram violeta.svg" : "/Instagram blanco.svg"
+                  }
+                  className="md:size-8 size-4 transition-all"
                   alt="Instagram"
                   width={32}
                   height={32}
@@ -60,8 +62,10 @@ export default function Footer() {
                 onMouseLeave={() => setLnHover(false)}
               >
                 <Image
-                  src={lnHover ? "/linedin violeta.svg" : "/Linkedin.svg"}
-                  className={`${lnHover ? "md:size-7 size-6" : "md:size-10 size-6"} object-contain`}
+                  src={
+                    lnHover ? "/linedin violeta.svg" : "/Linkedin blanco.svg"
+                  }
+                  className="md:size-8 size-4 transition-all"
                   alt="LinkedIn"
                   width={32}
                   height={32}
