@@ -27,7 +27,7 @@ export default function Page() {
           <Image
             src="/Logos/quippos.svg"
             alt="Gracias"
-            width={500}
+            width={470}
             height={500}
           />
         </motion.div>
@@ -39,7 +39,7 @@ export default function Page() {
           transition={{ staggerChildren: 0.15 }}
         >
           <motion.h2
-            className="md:text-8xl text-4xl font-medium text-[#9a69f9]"
+            className="md:text-[94px] text-4xl font-medium text-[#9a69f9]"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -69,7 +69,7 @@ export default function Page() {
           >
             <Link
               href="/"
-              className="bg-[#a780f5] rounded-full p-4 text-sm md:text-lg"
+              className="bg-[#a780f5] rounded-full p-4 text-sm md:text-lg mb-2"
             >
               volver a la home
             </Link>
