@@ -1,5 +1,12 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+
 export default function Footer() {
+  const [igHover, setIgHover] = useState(false);
+  const [lnHover, setLnHover] = useState(false);
+
   return (
     <footer className="bg-[#04102d] py-12 pt-4 px-6 md:px-4 md:py-16 text-white relative z-40">
       <div className="mx-auto max-w-7xl px-4 lg:px-0 w-full">
@@ -23,37 +30,41 @@ export default function Footer() {
               </a>
             </div>
 
+            {/* ---------- SOCIAL ICONS (WITH HOVER SWAP) ----------- */}
             <div className="flex items-center gap-2 md:gap-6">
+              {/* Instagram */}
               <a
                 href="https://www.instagram.com/finnegans_sa/"
                 target="_blank"
                 aria-label="Instagram"
-                className="text-white/70 transition hover:text-white"
+                className="transition"
+                onMouseEnter={() => setIgHover(true)}
+                onMouseLeave={() => setIgHover(false)}
               >
                 <Image
-                  src="/Instagram.svg"
-                  className="md:size-8 size-4"
+                  src={igHover ? "/Instagram violeta.svg" : "/Instagram.svg"}
+                  className="md:size-8 size-4 transition-all"
                   alt="Instagram"
                   width={32}
                   height={32}
-                  // onMouseEnter={() => (this.src = "/Instagram celeste.svg")}
-                  // onMouseLeave={() => (this.src = "/Instagram.svg")}
                 />
               </a>
+
+              {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/company/finnegans-s-a/"
                 target="_blank"
                 aria-label="LinkedIn"
-                className="text-white/70 transition hover:text-white"
+                className="transition"
+                onMouseEnter={() => setLnHover(true)}
+                onMouseLeave={() => setLnHover(false)}
               >
                 <Image
-                  src="/Linkedin.svg"
-                  className="md:size-10 size-6"
+                  src={lnHover ? "/linedin violeta.svg" : "/Linkedin.svg"}
+                  className="md:size-10 size-6 transition-all"
                   alt="LinkedIn"
                   width={32}
                   height={32}
-                  // onMouseEnter={() => (this.src = "/Linkedin Celeste.svg")}
-                  // onMouseLeave={() => (this.src = "/Linkedin.svg")}
                 />
               </a>
             </div>
@@ -65,7 +76,7 @@ export default function Footer() {
               alt=""
               className="flex md:hidden h-6 max-w-max"
             />
-            <a href="#home" className="rounded-full  text-sm transition">
+            <a href="#home" className="rounded-full text-sm transition">
               <img
                 src="/ultimo-boton.png"
                 className="w-36 md:w-48 aspect-auto object-contain max-w-max overflow-hidden"
