@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { Card, CardTitle } from "../ui/card";
 import Image from "next/image";
 import { Label } from "../ui/label";
@@ -28,12 +28,31 @@ export default function Hero() {
 
   const [index, setIndex] = useState(0);
 
+  // 🆕 estado para el bubble de éxito
+  const [showBubble, setShowBubble] = useState(false);
+
   useEffect(() => {
     const id = setInterval(() => {
       setIndex((prev) => (prev + 1) % phrases.length);
     }, 2500); // cambia cada 2.5s
     return () => clearInterval(id);
   }, []);
+
+  // 🆕 handler de submit (no cambia layout, solo lógica)
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // acá podrías hacer tu lógica real (fetch, etc.)
+    // por ahora solo mostramos el bubble
+    setShowBubble(true);
+    // opcional: resetear el form
+    e.currentTarget.reset();
+
+    // ocultar bubble después de unos segundos
+    setTimeout(() => {
+      setShowBubble(false);
+    }, 3000);
+  };
 
   return (
     <section
@@ -105,51 +124,57 @@ export default function Hero() {
               Solicitar demo gratuita
             </CardTitle>
 
-            <div className="space-y-1 md:space-y-4 mt-1 md:mt-8">
-              <div className="space-y-1 md:space-y-2">
-                <Label className="whitespace-nowrap text-xs md:text-base">
-                  Nombre y Apellido
-                </Label>
-
-                <Input className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
-              </div>
-              <div className="space-y-1 md:space-y-2">
-                <Label className="whitespace-nowrap text-xs md:text-base">
-                  Email laboral
-                </Label>
-
-                <Input className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
-              </div>
-              <div className="space-y-1 md:space-y-2">
-                <Label className="whitespace-nowrap text-xs md:text-base">
-                  Industria
-                </Label>
-
-                <Input className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
-              </div>
-              <div className="space-y-1 md:space-y-2">
-                <Label className="whitespace-nowrap text-xs md:text-base">
-                  País
-                </Label>
-
-                <Input className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
-              </div>
-              <div className="grid grid-cols-10 gap-2 place-items-center">
-                <div className="space-y-1 md:space-y-2 col-span-6 w-full">
+            {/* 🆕 Form wrapper (no cambia clases internas, solo semántica + onSubmit) */}
+            <form onSubmit={handleSubmit}>
+              <div className="space-y-1 md:space-y-4 mt-1 md:mt-8">
+                <div className="space-y-1 md:space-y-2">
                   <Label className="whitespace-nowrap text-xs md:text-base">
-                    Cantidad de Empleados
+                    Nombre y Apellido
                   </Label>
 
                   <Input className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
                 </div>
-                <button className="col-span-4 rounded-full cursor-pointer bg-[#e8d8ff] text-[#27067f] md:py-1 py-1 font-semibold px-1 md:px-2 max-h-max w-full flex items-center justify-between text-xs md:text-2xl md:pl-6 pl-2 relative top-2 md:top-4">
-                  Enviar{" "}
-                  <span className="bg-[#f0f0f0] rounded-full  md:h-6 md:w-6 grid place-items-center">
-                    <ArrowRight color="#27067f" />
-                  </span>
-                </button>
+                <div className="space-y-1 md:space-y-2">
+                  <Label className="whitespace-nowrap text-xs md:text-base">
+                    Email laboral
+                  </Label>
+
+                  <Input className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
+                </div>
+                <div className="space-y-1 md:space-y-2">
+                  <Label className="whitespace-nowrap text-xs md:text-base">
+                    Industria
+                  </Label>
+
+                  <Input className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
+                </div>
+                <div className="space-y-1 md:space-y-2">
+                  <Label className="whitespace-nowrap text-xs md:text-base">
+                    País
+                  </Label>
+
+                  <Input className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
+                </div>
+                <div className="grid grid-cols-10 gap-2 place-items-center">
+                  <div className="space-y-1 md:space-y-2 col-span-6 w-full">
+                    <Label className="whitespace-nowrap text-xs md:text-base">
+                      Cantidad de Empleados
+                    </Label>
+
+                    <Input className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
+                  </div>
+                  <button
+                    type="submit"
+                    className="col-span-4 rounded-full cursor-pointer bg-[#e8d8ff] text-[#27067f] md:py-1 py-1 font-semibold px-1 md:px-2 max-h-max w-full flex items-center justify-between text-xs md:text-2xl md:pl-6 pl-2 relative top-2 md:top-4"
+                  >
+                    Enviar{" "}
+                    <span className="bg-[#f0f0f0] rounded-full  md:h-6 md:w-6 grid place-items-center">
+                      <ArrowRight color="#27067f" />
+                    </span>
+                  </button>
+                </div>
               </div>
-            </div>
+            </form>
           </Card>
         </div>
       </section>
@@ -176,6 +201,28 @@ export default function Hero() {
           World Class
         </p>
       </motion.div>
+
+      {/* 🆕 Bubble flotante de confirmación (no afecta layout, es fixed) */}
+      <AnimatePresence>
+        {showBubble && (
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 40 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            className="fixed bottom-6 right-6 z-[9999] bg-[#27067f] text-white rounded-2xl shadow-lg px-4 py-3 text-sm md:text-base flex items-center gap-2"
+          >
+            <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#a780f5] text-xs font-bold">
+              ✓
+            </span>
+            <span>
+              ¡Gracias! Recibimos tu solicitud de demo.{" "}
+              <br className="hidden md:block" />
+              Nos contactamos pronto ✨
+            </span>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
