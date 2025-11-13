@@ -7,6 +7,7 @@ import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { ArrowRight, Plus } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const variants = {
   enter: {
@@ -24,6 +25,7 @@ const variants = {
 };
 
 export default function Hero() {
+  const { push } = useRouter();
   const phrases = ["Con tu cultura", "A tu escala", "A una fracción del costo"];
 
   const [index, setIndex] = useState(0);
@@ -47,6 +49,8 @@ export default function Hero() {
     setShowBubble(true);
     // opcional: resetear el form
     e.currentTarget.reset();
+
+    push("/gracias");
 
     // ocultar bubble después de unos segundos
     setTimeout(() => {

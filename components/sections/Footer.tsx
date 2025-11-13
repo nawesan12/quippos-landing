@@ -25,7 +25,7 @@ export default function Footer() {
               <a href="#academia" className="transition hover:text-[#ad7efc]">
                 Finni IA
               </a>
-              <a href="#impacto" className="transition hover:text-[#ad7efc]">
+              <a href="#home" className="transition hover:text-[#ad7efc]">
                 Contacto
               </a>
             </div>
