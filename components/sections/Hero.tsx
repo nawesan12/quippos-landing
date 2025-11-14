@@ -118,7 +118,8 @@ export default function Hero() {
 
           <p className="text-xs whitespace-nowrap md:text-2xl leading-tight font-medium">
             Impulsá el crecimiento de tu equipo con <br /> una plataforma HCM
-            que integra la gestión <br /> de procesos y mejora la comunicación.
+            que integra la gestión <br /> de procesos y mejora la comunicación
+            interna.
           </p>
         </div>
 

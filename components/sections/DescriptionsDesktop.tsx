@@ -8,40 +8,43 @@ const cards = [
     id: 1,
     icon: "/Iconos/SVG/mouse1.svg",
     titulo: "100% \n Configurable",
-    descripcion: "Hace que el sistema se \n adapte a tu forma de trabajar.",
+    descripcion:
+      "Definí las políticas, flujos y reglas de tu organización sin depender de desarrollo técnico.",
   },
   {
     id: 2,
     icon: "/Iconos/SVG/destello1.svg",
     titulo: "IA+ \n No Code",
     descripcion:
-      "Automatiza tus tareas y procesos \n con inteligencia artificial.",
+      "Modelá procesos con BModeler y Finni para automatizar tareas y conectar sistemas sin programar.",
   },
   {
     id: 3,
     icon: "/Iconos/SVG/flecha1.svg",
     titulo: "Portal de \n Autogestion",
     descripcion:
-      "Centraliza la informacion y \n tramites de tus colaboradores.",
+      "Centralizá la información de tus colaboradores en un portal único para licencias, recibos, documentos y comunicación interna.",
   },
   {
     id: 4,
     icon: "/Iconos/SVG/trueno1.svg",
-    titulo: "Liquidacion \n Automatica",
-    descripcion: "Genera y distribui recibos \n en segundos, sin errores.",
+    titulo: "Liquidación \n Automática",
+    descripcion:
+      "Liquidá con precisión según convenios e impuestos, y enviá recibos al instante.",
   },
   {
     id: 5,
     icon: "/Iconos/SVG/carpeta1.svg",
-    titulo: "Integracion \n Total",
+    titulo: "Integración \n Total",
     descripcion:
-      "Conecta el sistema con \n cualquier ERP o \n herramienta del mercado.",
+      "Conectá la plataforma \n con cualquier ERP o \n herramienta del mercado.",
   },
   {
     id: 6,
     icon: "/Iconos/SVG/reloj1.svg",
     titulo: "Implementación \n Express",
-    descripcion: "Pasa del inicio \n al uso real en semanas.",
+    descripcion:
+      "Poné Quippos en marcha en semanas con una implementación ágil basada en MVP.",
   },
 ];
 
@@ -89,7 +92,7 @@ export default function DescriptionsDesktop() {
   };
 
   return (
-    <section className="bg-[#27067f] py-12 md:block hidden">
+    <section id="descriptions" className="bg-[#27067f] py-12 md:block hidden">
       <div className="mx-auto w-full max-w-7xl flex flex-col gap-8 px-4 lg:flex-row lg:items-stretch">
         {/* MOBILE */}
         <div className="w-full flex flex-col items-center gap-6 lg:hidden">

@@ -30,9 +30,12 @@ export default function CTA() {
             humano y cercano.
           </p>
 
-          <Button className="cursor-pointer rounded-full p-4 py-5 md:py-6 md:px-8 bg-[#6e42c8] text-white text-sm max-w-max md:self-end md:text-lg">
+          <a
+            href="#home"
+            className="cursor-pointer rounded-full p-4 py-5 md:py-6 md:px-8 bg-[#6e42c8] text-white text-sm max-w-max md:self-end md:text-lg"
+          >
             Agendá una demo ahora
-          </Button>
+          </a>
         </div>
       </section>
     </section>

@@ -15,7 +15,7 @@ export default function Features() {
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -10]);
 
   return (
-    <section className="bg-[#01102f] pt-20 md:pt-0 pb-20 md:pb-0">
+    <section id="finni" className="bg-[#01102f] pt-20 md:pt-0 pb-20 md:pb-0">
       <section className="flex items-center justify-around md:flex-row  min-h-svh flex-col w-full  md:pt-28 md:max-w-7xl mx-auto">
         <section className="rounded-4xl border-2 border-white max-w-2xs  md:max-w-xs md:scale-125">
           <Image
@@ -55,9 +55,7 @@ export default function Features() {
                 className="h-10 w-10 object-contain"
               />
               <p className="font-medium whitespace-nowrap text-sm">
-                Automatización{" "}
-                <span className="italic text-[#ff4131]">sin código</span>
-                <br /> de procesos repetitivos.
+                Automatización <br /> de procesos repetitivos.
               </p>
             </div>
           </article>
@@ -107,7 +105,7 @@ export default function Features() {
                 className="h-10 w-10 object-contain"
               />
               <p className="font-medium whitespace-nowrap text-sm">
-                Diseño de{" "}
+                Diseño sin codigo <br /> de{" "}
                 <span className="italic text-[#ff4131]">procesos a medida</span>
               </p>
             </div>

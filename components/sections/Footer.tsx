@@ -19,10 +19,13 @@ export default function Footer() {
 
           <section className="flex items-center w-full justify-between md:justify-evenly">
             <div className="items-center text-sm md:text-xl font-medium gap-2 md:gap-6 text-white flex">
-              <a href="#soluciones" className="transition hover:text-[#ad7efc]">
+              <a
+                href="#descriptions"
+                className="transition hover:text-[#ad7efc]"
+              >
                 Que ofrecemos
               </a>
-              <a href="#academia" className="transition hover:text-[#ad7efc]">
+              <a href="#finni" className="transition hover:text-[#ad7efc]">
                 Finni IA
               </a>
               <a href="#home" className="transition hover:text-[#ad7efc]">

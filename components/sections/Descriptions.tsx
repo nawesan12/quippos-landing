@@ -8,40 +8,43 @@ const cards = [
     id: 1,
     icon: "/Iconos/SVG/mouse1.svg",
     titulo: "100% \n Configurable",
-    descripcion: "Hacé que el sistema se \n adapte a tu forma de trabajar.",
+    descripcion:
+      "Definí las políticas, flujos y reglas de tu organización sin depender de desarrollo técnico.",
   },
   {
     id: 2,
     icon: "/Iconos/SVG/destello1.svg",
     titulo: "IA+ \n No Code",
     descripcion:
-      "Automatizá tus tareas y procesos con inteligencia artificial.",
+      "Modelá procesos con BModeler y Finni para automatizar tareas y conectar sistemas sin programar.",
   },
   {
     id: 3,
     icon: "/Iconos/SVG/flecha1.svg",
     titulo: "Portal de \n Autogestion",
     descripcion:
-      "Centralizá la información y \n tramites de tus colaboradores.",
+      "Centralizá la información de tus colaboradores en un portal único para licencias, recibos, documentos y comunicación interna.",
   },
   {
     id: 4,
     icon: "/Iconos/SVG/trueno1.svg",
     titulo: "Liquidación \n Automática",
-    descripcion: "Generá y distribuí recibos \n en segundos, sin errores.",
+    descripcion:
+      "Liquidá con precisión según convenios e impuestos, y enviá recibos al instante.",
   },
   {
     id: 5,
     icon: "/Iconos/SVG/carpeta1.svg",
     titulo: "Integración \n Total",
     descripcion:
-      "Conectá el sistema \n con cualquier ERP o \n herramienta del mercado.",
+      "Conectá la plataforma \n con cualquier ERP o \n herramienta del mercado.",
   },
   {
     id: 6,
     icon: "/Iconos/SVG/reloj1.svg",
     titulo: "Implementación \n Express",
-    descripcion: "Pasá del inicio \n al uso real en semanas.",
+    descripcion:
+      "Poné Quippos en marcha en semanas con una implementación ágil basada en MVP.",
   },
 ];
 
@@ -87,7 +90,7 @@ export default function Descriptions() {
   };
 
   return (
-    <section className="bg-[#27067f] py-12 md:hidden block">
+    <section id="descriptions" className="bg-[#27067f] py-12 md:hidden block">
       <div className="mx-auto flex w-full flex-col items-center gap-6 px-4">
         {/* Controllers */}
         <ul className="controllers w-full flex gap-px items-center bg-[#1e0560] rounded-2xl overflow-hidden">
