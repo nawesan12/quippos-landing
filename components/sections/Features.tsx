@@ -28,14 +28,14 @@ export default function Features() {
 
           <motion.div
             ref={stampRef}
-            className="estampilla bg-no-repeat bg-center relative bg-[url('/hojita-finni-derecha.png')] bg-contain py-8 flex flex-col gap-4 px-6 md:px-10 md:scale-[111%] md:relative  -left-1"
+            className="cursor-default estampilla bg-no-repeat bg-center relative bg-[url('/hojita-finni-derecha.png')] bg-contain py-8 flex flex-col gap-4 px-6 md:px-10 md:scale-[111%] md:relative  -left-1"
             style={{ rotate }}
           >
-            <h3 className="bg-[#ff4131] text-[#faf5f2] rounded-full py-2 px-6 text-2xl font-semibold max-w-max relative -left-15">
+            <h3 className="cursor-default bg-[#ff4131] text-[#faf5f2] rounded-full py-2 px-6 text-2xl font-semibold max-w-max relative -left-15">
               Nuestra IA
             </h3>
 
-            <p className="font-medium text-sm md:text-base leading-tight pb-4 md:pb-0">
+            <p className="cursor-default font-medium text-sm md:text-base leading-tight pb-4 md:pb-0">
               Diseñada para liberar a tu equipo de lo operativo, <br />
               impulsando su evolución profesional y el desarrollo
               <br />
@@ -54,7 +54,7 @@ export default function Features() {
                 height={100}
                 className="h-10 w-10 object-contain"
               />
-              <p className="font-medium whitespace-nowrap text-sm">
+              <p className="font-medium cursor-default whitespace-nowrap text-sm">
                 Automatización <br /> de procesos repetitivos.
               </p>
             </div>
@@ -69,7 +69,7 @@ export default function Features() {
                 height={100}
                 className="h-10 w-10 object-contain"
               />
-              <p className="font-medium whitespace-nowrap text-sm">
+              <p className="font-medium whitespace-nowrap text-sm cursor-default">
                 Asistente{" "}
                 <span className="italic text-[#ff4131]">conversacional</span>
                 <br /> para RRHH y colaboradores
@@ -86,7 +86,7 @@ export default function Features() {
                 height={100}
                 className="h-10 w-10 object-contain"
               />
-              <p className="font-medium whitespace-nowrap text-sm">
+              <p className="font-medium whitespace-nowrap text-sm cursor-default">
                 Mejora la experiencia digital: <br />
                 <span className="italic text-[#ff4131]">
                   Respuestas rápidas y guiadas
@@ -95,7 +95,7 @@ export default function Features() {
             </div>
           </article>
 
-          <article className="p-px rounded-2xl bg-gradient-to-r from-[#ff4131] to-transparent">
+          <article className="p-px rounded-2xl bg-gradient-to-r from-[#ff4131] to-transparent cursor-default">
             <div className="rounded-2xl bg-[#551b30] hover:brightness-125  transition  flex items-center gap-4 p-4 px-6">
               <Image
                 src="/Iconos/SVG/lapiz2.svg"
@@ -104,7 +104,7 @@ export default function Features() {
                 height={100}
                 className="h-10 w-10 object-contain"
               />
-              <p className="font-medium whitespace-nowrap text-sm">
+              <p className="font-medium whitespace-nowrap text-sm cursor-default">
                 Diseño sin codigo <br /> de{" "}
                 <span className="italic text-[#ff4131]">procesos a medida</span>
               </p>
