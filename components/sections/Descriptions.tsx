@@ -122,11 +122,11 @@ export default function Descriptions() {
               className="snap-center shrink-0 basis-[97%] relative mt-4"
             >
               <div className="solapa absolute h-8 w-20 left-8 bg-[#a780f5] rounded-t-2xl -top-4 z-20" />
-              <section className="bg-white rounded-3xl p-8 text-gray-800 shadow-lg flex flex-col justify-around gap-4 h-64 relative z-40">
+              <section className="bg-white rounded-3xl p-8 text-gray-800 shadow-lg flex flex-col justify-around gap-4 h-72 relative z-40">
                 <h3 className="text-2xl font-semibold bg-[#e8d8ff] text-[#27067f] p-4 px-6 rounded-2xl whitespace-pre-line leading-tight">
                   {card.titulo}
                 </h3>
-                <p className="text-[#27067f] font-medium text-base px-6 whitespace-pre-line leading-tight">
+                <p className="text-[#27067f] font-medium text-base px-6 pb-10 whitespace-pre-line leading-tight">
                   {card.descripcion}
                 </p>
               </section>
