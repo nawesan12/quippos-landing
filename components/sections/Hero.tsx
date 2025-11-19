@@ -24,38 +24,50 @@ const variants = {
   },
 };
 
+// 🔹 tu endpoint de Formspree / Getform / lo que uses
+const FORMSPREE_URL = "https://formspree.io/f/xqanqbby";
+
 export default function Hero() {
   const { push } = useRouter();
   const phrases = ["Con tu cultura", "A tu escala", "A una fracción del costo"];
 
   const [index, setIndex] = useState(0);
-
-  // 🆕 estado para el bubble de éxito
   const [showBubble, setShowBubble] = useState(false);
 
   useEffect(() => {
     const id = setInterval(() => {
       setIndex((prev) => (prev + 1) % phrases.length);
-    }, 2500); // cambia cada 2.5s
+    }, 2500);
     return () => clearInterval(id);
   }, []);
 
-  // 🆕 handler de submit (no cambia layout, solo lógica)
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  // 🔹 AHORA: manda el FormData al endpoint externo
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // acá podrías hacer tu lógica real (fetch, etc.)
-    // por ahora solo mostramos el bubble
-    setShowBubble(true);
-    // opcional: resetear el form
-    e.currentTarget.reset();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-    push("/gracias");
+    try {
+      await fetch(FORMSPREE_URL, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
 
-    // ocultar bubble después de unos segundos
-    setTimeout(() => {
-      setShowBubble(false);
-    }, 3000);
+      setShowBubble(true);
+      form.reset();
+      push("/gracias");
+
+      setTimeout(() => {
+        setShowBubble(false);
+      }, 3000);
+    } catch (error) {
+      console.error("Error enviando lead:", error);
+      // acá podrías mostrar otro bubble de error si querés
+    }
   };
 
   return (
@@ -97,11 +109,10 @@ export default function Hero() {
             </span>
 
             <div className="ml-3 flex-1 overflow-hidden ">
-              {/* “Ventana” fija del elevador */}
               <div className="relative md:h-8 h-6 overflow-hidden">
                 <AnimatePresence initial={false} mode="wait">
                   <motion.p
-                    key={index} // clave distinta para que AnimatePresence detecte el cambio
+                    key={index}
                     variants={variants}
                     initial="enter"
                     animate="center"
@@ -129,7 +140,7 @@ export default function Hero() {
               Solicitar demo gratuita
             </CardTitle>
 
-            {/* 🆕 Form wrapper (no cambia clases internas, solo semántica + onSubmit) */}
+            {/* 🔹 Usamos handleSubmit para mandar a Formspree */}
             <form onSubmit={handleSubmit}>
               <div className="space-y-1 md:space-y-4 mt-1 md:mt-8">
                 <div className="space-y-1 md:space-y-2">
@@ -137,28 +148,41 @@ export default function Hero() {
                     Nombre y Apellido
                   </Label>
 
-                  <Input className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
+                  <Input
+                    name="fullName"
+                    className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2"
+                  />
                 </div>
                 <div className="space-y-1 md:space-y-2">
                   <Label className="whitespace-nowrap text-xs md:text-base">
                     Email laboral
                   </Label>
 
-                  <Input className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
+                  <Input
+                    name="workEmail"
+                    type="email"
+                    className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2"
+                  />
                 </div>
                 <div className="space-y-1 md:space-y-2">
                   <Label className="whitespace-nowrap text-xs md:text-base">
                     Industria
                   </Label>
 
-                  <Input className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
+                  <Input
+                    name="industry"
+                    className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2"
+                  />
                 </div>
                 <div className="space-y-1 md:space-y-2">
                   <Label className="whitespace-nowrap text-xs md:text-base">
                     País
                   </Label>
 
-                  <Input className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
+                  <Input
+                    name="country"
+                    className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2"
+                  />
                 </div>
                 <div className="grid grid-cols-10 gap-2 place-items-center">
                   <div className="space-y-1 md:space-y-2 col-span-6 w-full">
@@ -166,7 +190,10 @@ export default function Hero() {
                       Cantidad de Empleados
                     </Label>
 
-                    <Input className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2" />
+                    <Input
+                      name="employeeCount"
+                      className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2"
+                    />
                   </div>
                   <button
                     type="submit"
@@ -207,7 +234,6 @@ export default function Hero() {
         </p>
       </motion.div>
 
-      {/* 🆕 Bubble flotante de confirmación (no afecta layout, es fixed) */}
       <AnimatePresence>
         {showBubble && (
           <motion.div
