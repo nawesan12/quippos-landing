@@ -23,7 +23,7 @@ export default function Features() {
             alt="Logo Finní"
             width={220}
             height={220}
-            className="mx-auto py-8"
+            className="mx-auto py-8 w-44 md:w-52"
           />
 
           <motion.div
@@ -31,7 +31,7 @@ export default function Features() {
             className="cursor-default estampilla bg-no-repeat bg-center relative bg-[url('/hojita-finni-derecha.png')] bg-contain py-8 flex flex-col gap-4 px-6 md:px-10 md:scale-[111%] md:relative  -left-1"
             style={{ rotate }}
           >
-            <h3 className="cursor-default bg-[#ff4131] text-[#faf5f2] rounded-full py-2 px-6 text-2xl font-semibold max-w-max relative -left-15">
+            <h3 className="cursor-default bg-[#ff4131] text-[#faf5f2] rounded-full py-2 px-6 text-2xl font-semibold max-w-max relative -left-12 md:-left-13">
               Nuestra IA
             </h3>
 
@@ -55,7 +55,7 @@ export default function Features() {
                 className="h-10 w-10 object-contain"
               />
               <p className="font-medium cursor-default whitespace-nowrap text-sm">
-                Automatización <br /> de procesos repetitivos.
+                Automatización <br /> de procesos repetitivos
               </p>
             </div>
           </article>

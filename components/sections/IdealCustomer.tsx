@@ -125,7 +125,7 @@ export default function IdealCustomer() {
       </section>
 
       <DotLottieReact
-        className="px-2 md:max-w-xl md:scale-200"
+        className="px-2 w-xl pt-8 md:py-0 md:max-w-xl md:scale-200"
         src="/Animaciones/Animacion mano.lottie"
         loop
         autoplay
