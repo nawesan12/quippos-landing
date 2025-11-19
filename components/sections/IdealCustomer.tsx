@@ -28,7 +28,7 @@ export default function IdealCustomer() {
 
           <ul className="text-white px-4 flex flex-col gap-4 md:max-w-sm relative z-20">
             {/* 1 */}
-            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs md:text-base font-medium">
+            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-[13px] md:text-base font-medium">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5, y: 10 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -51,7 +51,7 @@ export default function IdealCustomer() {
             </li>
 
             {/* 2 */}
-            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs md:text-base font-medium">
+            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-[13px] md:text-base font-medium">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5, y: 10 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -76,7 +76,7 @@ export default function IdealCustomer() {
             </li>
 
             {/* 3 */}
-            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs md:text-base font-medium">
+            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-[13px] md:text-base font-medium">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5, y: 10 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -99,7 +99,7 @@ export default function IdealCustomer() {
             </li>
 
             {/* 4 */}
-            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-xs   md:text-base font-medium">
+            <li className="relative rounded-full bg-[#27067f] p-4 px-2 text-[13px] md:text-base font-medium">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5, y: 10 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
