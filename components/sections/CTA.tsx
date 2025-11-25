@@ -8,7 +8,7 @@ export default function CTA() {
       <section className="flex flex-col md:flex-row md:items-center md:max-w-7xl w-full mx-auto justify-center md:justify-between  px-10 py-20 md:py-11">
         <div className="logo ">
           <Image
-            src="/Animaciones/Animacion-logo-q.gif"
+            src="/lila.png"
             alt="Quippos Logo"
             width={100}
             height={100}
