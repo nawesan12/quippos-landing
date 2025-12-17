@@ -9,7 +9,7 @@ import { ArrowRight, Plus } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import ReCAPTCHA from "react-google-recaptcha";
-import PhoneInput from "react-phone-number-input";
+import { PhoneInput } from "@/components/ui/phone-input";
 import { validateEmail } from "@/lib/validation/emailDomains";
 import { validatePhoneNumber } from "@/lib/validation/phoneValidation";
 
@@ -283,22 +283,11 @@ export default function Hero() {
                   )}
                 </div>
 
-                <div className="space-y-1 md:space-y-2">
-                  <Label className="whitespace-nowrap text-xs md:text-base">
-                    Teléfono <span className="text-red-500">*</span>
-                  </Label>
-                  <PhoneInput
-                    international
-                    defaultCountry="AR"
-                    countries={["AR", "CO", "PE", "MX", "CL", "UY", "PY", "BO", "EC", "VE"]}
-                    value={phone}
-                    onChange={(value) => setPhone(value || "")}
-                    className="bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2 phone-input-custom"
-                  />
-                  {errors.phone && (
-                    <p className="text-red-500 text-[10px] md:text-xs">{errors.phone}</p>
-                  )}
-                </div>
+                <PhoneInput
+                  value={phone}
+                  onChange={setPhone}
+                  error={errors.phone}
+                />
 
                 <div className="space-y-1 md:space-y-2">
                   <Label className="whitespace-nowrap text-xs md:text-base">
