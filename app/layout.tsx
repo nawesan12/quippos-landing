@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import "react-phone-number-input/style.css";
 import Script from "next/script";
 
 const poppins = Poppins({

@@ -10,9 +10,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import ReCAPTCHA from "react-google-recaptcha";
 import PhoneInput from "react-phone-number-input";
-import "react-phone-number-input/style.css";
 import { validateEmail } from "@/lib/validation/emailDomains";
-import { validatePhoneNumber, type SupportedCountry } from "@/lib/validation/phoneValidation";
+import { validatePhoneNumber } from "@/lib/validation/phoneValidation";
 
 const variants = {
   enter: {
