@@ -116,7 +116,31 @@
     * {
         @apply border-border outline-ring/50;
     }
+    html, body {
+        @apply overflow-x-hidden;
+    }
     body {
         @apply bg-background text-foreground;
     }
+}
+
+/* Custom styles for PhoneInput to match the form design */
+.PhoneInput {
+    @apply w-full;
+}
+
+.PhoneInputInput {
+    @apply bg-[#f0f0f0] h-8 md:h-auto md:text-base text-sm rounded-full py-1 md:py-2 px-2 w-full border-none outline-none;
+}
+
+.PhoneInputCountry {
+    @apply px-2;
+}
+
+.PhoneInputCountryIcon {
+    @apply w-5 h-4 md:w-6 md:h-5;
+}
+
+.PhoneInputCountrySelect {
+    @apply bg-transparent border-none outline-none cursor-pointer;
 }
